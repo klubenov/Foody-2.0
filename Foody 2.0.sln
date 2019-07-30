@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{19C12D70-B49E-4CE8-AEAF-4FCC3AFC0F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foody.Web", "Foody.Web\Foody.Web.csproj", "{1BADD576-4E7C-456C-B4D1-99A0CD7CD395}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BADD576-4E7C-456C-B4D1-99A0CD7CD395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BADD576-4E7C-456C-B4D1-99A0CD7CD395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BADD576-4E7C-456C-B4D1-99A0CD7CD395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BADD576-4E7C-456C-B4D1-99A0CD7CD395}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BADD576-4E7C-456C-B4D1-99A0CD7CD395} = {19C12D70-B49E-4CE8-AEAF-4FCC3AFC0F18}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {516DDF84-F374-4AED-BAD6-1284D630A554}
+	EndGlobalSection
+EndGlobal
