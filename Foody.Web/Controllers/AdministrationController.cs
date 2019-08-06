@@ -8,8 +8,10 @@ namespace Foody.Web.Controllers
 {
     public class AdministrationController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string option)
         {
+            ViewData["Partial"] = option;
+
             return View();
         }
     }

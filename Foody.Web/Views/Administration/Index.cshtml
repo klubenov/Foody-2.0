@@ -3,25 +3,58 @@
     ViewData["Title"] = "Administration";
 }
 
-<aside class="menu-bar">
-    <h2>Content Management</h2>
-    <ul class="menu-list">
-        <li><button>Micro Elements</button></li>
-        <li><button>Macro Elements</button></li>
-        <li><button>Food Items</button></li>
-        <li><button>Recipes</button></li>
-    </ul>
-</aside>
+<div class="menu">
+    <aside class="menu-bar">
+        <h3>Content Management</h3>
+        <ul class="menu-list">
+            <li><a href="/Administration/Index?option=_MicroElementsPartial" id="_MicroElementsPartial">Micro Elements</a></li>
+            <li><a href="/Administration/Index?option=_MacroElementsPartial" id="_MacroElementsPartial">Macro Elements</a></li>
+            <li><a href="/Administration/Index?option=_FoodItemsPartial" id="_FoodItemsPartial">Food Items</a></li>
+            <li><a href="/Administration/Index?option=_RecipesPartial" id="_RecipesPartial">Recipes</a></li>
+        </ul>
+    </aside>
 
-<main>
-    <div id="partial-wrapper">
+    <main class="menu-option">
+        @if (ViewData["Partial"] != null)
+        {
+            <partial name="@ViewData["Partial"]" />
+        }
+    </main>
+</div>
 
-    </div>
-</main>
 
 @section Scripts
 {
+    @if (ViewData["Partial"] != null)
+    {
+        <script>
+            (function () {
+                let partial = @ViewData["Partial"];
+                partial.classList.add('clicked-item');
 
+                document.getElementsByClassName('menu-option')[0].setAttribute('style', 'display:block');
+            })();
+        </script>
+
+        <script>
+            let items = document.querySelectorAll('.toggle-area');
+            items.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    let onClickArea = item.parentNode.getElementsByClassName('on-click-area')[0];
+
+                    if (onClickArea.classList.contains('clicked-area')) {
+                        item.parentNode.getElementsByClassName('on-click-area')[0].classList.remove('clicked-area');
+                    } else {
+                        items.forEach(function (item) {
+                        item.parentNode.getElementsByClassName('on-click-area')[0].classList.remove('clicked-area');
+                    });
+
+                        onClickArea.classList.add('clicked-area');
+                    }
+                });
+            });
+        </script>
+    }
 }
 
 

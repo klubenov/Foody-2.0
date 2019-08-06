@@ -1,6 +1,7 @@
 ﻿@import url(variables.css);
 @import url(typography.css);
 @import url(navigation.css);
+@import url(menu.css);
 
 * {
     padding: 0;
@@ -25,6 +26,17 @@ body {
     max-width: 80%;
     width: 70rem;
     margin: 0 auto;
+}
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 11;
+}
+
+.site-content {
+    padding-top: 8rem;
 }
 
 .site-footer,
