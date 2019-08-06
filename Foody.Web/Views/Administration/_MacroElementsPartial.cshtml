@@ -1,25 +1,130 @@
-﻿<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
-<p>Macro elements</p>
+﻿<section class="search-area">
+    <h4>Quick search</h4>
+
+    <input type="search" name="itemSearch" id="itemSearch" placeholder="Please enter the name of the desired element.." />
+</section>
+
+<section class="items-area">
+    <h4>Macro Elements</h4>
+
+    <ul>
+        <li>
+            <div class="toggle-area">
+                <h5>Add new Macro Element</h5>
+            </div>
+
+            <form class="on-click-area" action="#">
+                <div class="image-and-description">
+                    <textarea placeholder="Please enter a short description" class="item-description new-item-description"></textarea>
+                </div>
+
+                <div class="data">
+                    <label for="newItemName">Name:</label>
+                    <input type="text" name="newItemName" id="newItemName" placeholder="Enter the element's name.." />
+                    <label for="newItemCalories">Calories:</label>
+                    <input type="text" name="newItemCalories" id="newItemCalories" placeholder="Enter the element's caloric content" />
+                    <label for="newItemImageUrl">Image URL:</label>
+                    <input type="text" name="newItemImageUrl" id="newItemImageUrl" placeholder="Enter the element's image url.." />
+                </div>
+
+                <input type="submit" class="submit-button" value="Create Macro Element" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Carbohydrates</p>
+                <p>4 kcal per 100 grams</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://triathlonworld.com/files/styles/large/public/media/image/file/dreamstime_s_120341978.jpg?itok=Diuj8bpL" />
+                    </div>
+                    <textarea class="item-description">Carbohydrates are the sugars, starches and fibers found in fruits, grains, vegetables and milk products. Though often maligned in trendy diets, carbohydrates — one of the basic food groups — are important to a healthy diet.A carbohydrate is a biomolecule consisting of carbon, hydrogen and oxygen atoms, usually with a hydrogen–oxygen atom ratio of 2:1 and thus with the empirical formula Cₘₙ. This formula holds true for monosaccharides.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="carbName">Name:</label>
+                    <input type="text" name="carbName" id="carbName" value="Carbohydrates" />
+                    <label for="carbCal">Calories per 100 grams:</label>
+                    <input type="text" name="carbCal" id="carbCal" value="4" />
+                </div>
+
+                <input type="submit" class="submit-button" value="Edit Element" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Fats</p>
+                <p>9 kcal per 100 grams</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://www.rd.com/wp-content/uploads/2016/04/01-signs-healthy-fats-mufa.jpg" />
+                    </div>
+                    <textarea class="item-description">Fats are one of the three main macronutrients, along with carbohydrates and proteins. Fat molecules consist of primarily carbon and hydrogen atoms and are therefore hydrophobic and are soluble in organic solvents and insoluble in water. Examples include cholesterol, phospholipids, and triglycerides. Fat is an important foodstuff for many forms of life, and fats serve both structural and metabolic functions. They are a necessary part of the diet of most heterotrophs (including humans) and are the most energy dense, thus the most efficient form of energy storage.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="fatName">Name:</label>
+                    <input type="text" name="fatName" id="fatName" value="Fats" />
+                    <label for="fatCal">Calories per 100 grams:</label>
+                    <input type="text" name="fatCal" id="fatCal" value="9" />
+                </div>
+
+                <input type="submit" class="submit-button" value="Edit Element" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Protein</p>
+                <p>4 kcal per 100 grams</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://www.rd.com/wp-content/uploads/2016/04/01-signs-healthy-fats-mufa.jpg" />
+                    </div>
+                    <textarea class="item-description">Proteins are essential nutrients for the human body. They are one of the building blocks of body tissue and can also serve as a fuel source. As a fuel, proteins provide as much energy density as carbohydrates: 4 kcal (17 kJ) per gram; in contrast, lipids provide 9 kcal (37 kJ) per gram. The most important aspect and defining characteristic of protein from a nutritional standpoint is its amino acid composition. Proteins are polymer chains made of amino acids linked together by peptide bonds. During human digestion, proteins are broken down in the stomach to smaller polypeptide chains via hydrochloric acid and protease actions. This is crucial for the absorption of the essential amino acids that cannot be biosynthesized by the body.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="protName">Name:</label>
+                    <input type="text" name="protName" id="protName" value="Protein" />
+                    <label for="protCal">Calories per 100 grams:</label>
+                    <input type="text" name="protCal" id="protCal" value="4" />
+                </div>
+
+                <input type="submit" class="submit-button" value="Edit Element" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Water</p>
+                <p>0 kcal per 100 grams</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://www.prominent.com/media/Applications/app-water-treatment-and-disinfection_TeaserImageBig.jpg" />
+                    </div>
+                    <textarea class="item-description">Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's streams, lakes, and oceans, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="waterName">Name:</label>
+                    <input type="text" name="waterName" id="waterName" value="Water" />
+                    <label for="waterCal">Calories per 100 grams:</label>
+                    <input type="text" name="waterCal" id="waterCal" value="0" />
+                </div>
+
+                <input type="submit" class="submit-button" value="Edit Element" />
+            </form>
+        </li>
+    </ul>
+</section>

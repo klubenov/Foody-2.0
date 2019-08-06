@@ -4,9 +4,10 @@
 
 .menu-bar h3 {
     color: var(--template-primary-color, blue);
-    padding-bottom: 4em;
-    padding-top: 2em;
     flex-basis: 25%;
+    padding: 2em 1em 2em 1em;
+    text-align: center;
+    line-height: 2em;
 }
 
 .menu-list li {
@@ -27,8 +28,9 @@
 .menu-list .clicked-item {
     background-color: white;
     border-right: none;
-    color: var(--template-primary-color-invert, yellow);
+    color: var(--template-primary-color, blue);
     border-color: var(--template-primary-color-invert, yellow);
+    font-size: 1.1em;
     border-width: 3px;
 }
 
@@ -75,8 +77,12 @@ a.clicked-item:after {
 }
 
 .menu-option .items-area {
-    padding: 0.3em;
+    padding: 0.8em;
     padding-top: 1em;
+}
+
+.items-area h4 {
+    padding: 1em 0 2em 0;
 }
 
 .items-area h4,
@@ -96,6 +102,11 @@ a.clicked-item:after {
     justify-content: space-around;
     background-color: #f8f8f8;
     padding: 0.6em 3em;
+}
+
+.toggle-area p {
+    flex-basis: 33%;
+    text-align: center;
 }
 
 .toggle-area:hover {
@@ -131,7 +142,7 @@ a.clicked-item:after {
     margin-right: auto;
     margin-top: 1.4em;
     padding: 0.5em;
-    font-size: 1.1em;
+    font-size: 1em;
     background-color: var(--template-primary-color, blue);
     color: white;
     border: 1px solid var(--template-primary-color, blue);
@@ -140,14 +151,46 @@ a.clicked-item:after {
 
 .menu-option .data {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .menu-option .data label,
 .menu-option .data input {
-    min-width: 50%;
-    max-width: 60%;
-    align-content: center;
+    flex: 0 0 60%;
+}
+
+.menu-option .data .elements {
+    flex: 0 0 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 2px solid #b4b4b4;
+    padding-top: 1em;
+    margin-top: 2em;
+}
+
+.elements .macro-elements,
+.elements .micro-elements {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 48%;
+}
+
+.menu-option .elements label,
+.menu-option .elements input {
+    flex-basis: 1em;
+}
+
+.menu-option .data label {
+    padding: 0.3em 0;
+    font-size: 0.9em;
+}
+
+.menu-option .data input {
+    padding: 0.3em;
+    border: 1px solid #b4b4b4;
+    border-radius: 0.2em;
 }
 
 .menu-option .image-and-description {

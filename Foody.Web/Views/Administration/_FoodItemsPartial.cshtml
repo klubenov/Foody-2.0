@@ -1,28 +1,360 @@
-﻿<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
-<p>Food Items</p>
+﻿<section class="search-area">
+    <h4>Quick search</h4>
+
+    <input type="search" name="itemSearch" id="itemSearch" placeholder="Please enter the name of the desired food item.." />
+</section>
+
+<section class="items-area">
+    <h4>Food Items</h4>
+
+    <ul>
+        <li>
+            <div class="toggle-area">
+                <h5>Add new Food Item</h5>
+            </div>
+
+            <form class="on-click-area" action="#">
+                <div class="image-and-description">
+                    <textarea placeholder="Please enter a short description" class="item-description new-item-description"></textarea>
+                </div>
+
+                <div class="data">
+                    <label for="newItemName">Name:</label>
+                    <input type="text" name="newItemName" id="newItemName" placeholder="Enter the item's name.." />
+                    <label for="newItemImageUrl">Image URL:</label>
+                    <input type="text" name="newItemImageUrl" id="newItemImageUrl" placeholder="Enter the element's image url.." />
+                    <div class="elements">
+                        <div class="micro-elements">
+                            <h6>Micro Elements (in mg.):</h6>
+                            <label for="newItemB1">Vitamin B1:</label>
+                            <input type="number" name="newItemB1" id="newItemB1" placeholder="Enter amount in mg.." />
+                            <label for="newItemB2">Vitamin B2:</label>
+                            <input type="number" name="newItemB2" id="newItemB2" placeholder="Enter amount in mg.." />
+                            <label for="newItemB3">Vitamin B3:</label>
+                            <input type="number" name="newItemB3" id="newItemB3" placeholder="Enter amount in mg.." />
+                            <label for="newItemB5">Vitamin B5:</label>
+                            <input type="number" name="newItemB5" id="newItemB5" placeholder="Enter amount in mg.." />
+                            <label for="newItemB6">Vitamin B6:</label>
+                            <input type="number" name="newItemB6" id="newItemB6" placeholder="Enter amount in mg.." />
+                            <label for="newItemB9">Vitamin B9:</label>
+                            <input type="number" name="newItemB9" id="newItemB9" placeholder="Enter amount in mg.." />
+                            <label for="newItemB12">Vitamin B12:</label>
+                            <input type="number" name="newItemB12" id="newItemB12" placeholder="Enter amount in mg.." />
+                            <label for="newItemC" Vitamin>C:</label>
+                            <input type="number" name="newItemC" id="newItemC" placeholder="Enter amount in mg.." />
+                            <label for="newItemE">Vitamin E:</label>
+                            <input type="number" name="newItemE" id="newItemE" placeholder="Enter amount in mg.." />
+                            <label for="newItemA">Vitamin A:</label>
+                            <input type="number" name="newItemA" id="newItemA" placeholder="Enter amount in mg.." />
+                            <label for="newItemD">Vitamin D:</label>
+                            <input type="number" name="newItemD" id="newItemD" placeholder="Enter amount in mg.." />
+                            <label for="newItemPotass">Potassium:</label>
+                            <input type="number" name="newItemPotass" id="newItemPotass" placeholder="Enter amount in mg.." />
+                            <label for="newItemSodium">Sodium:</label>
+                            <input type="number" name="newItemSodium" id="newItemSodium" placeholder="Enter amount in mg.." />
+                            <label for="newItemIron">Iron:</label>
+                            <input type="number" name="newItemIron" id="newItemIron" placeholder="Enter amount in mg.." />
+                            <label for="newItemZinc">Zinc:</label>
+                            <input type="number" name="newItemZinc" id="newItemZinc" placeholder="Enter amount in mg.." />
+                            <label for="newItemMagne">Magnesium:</label>
+                            <input type="number" name="newItemMagne" id="newItemMagne" placeholder="Enter amount in mg.." />
+                        </div>
+                        <div class="macro-elements">
+                            <h6>Macro Elements (in grams):</h6>
+                            <label for="newItemCarb">Carbohydrates:</label>
+                            <input type="number" name="newItemCarb" id="newItemCarb" placeholder="Enter amount in grams.." />
+                            <label for="newItemFat">Fats:</label>
+                            <input type="number" name="newItemFat" id="newItemFat" placeholder="Enter amount in grams.." />
+                            <label for="newItemProt">Protein:</label>
+                            <input type="number" name="newItemProt" id="newItemProt" placeholder="Enter amount in grams.." />
+                            <label for="newItemWater">Water:</label>
+                            <input type="number" name="newItemWater" id="newItemWater" placeholder="Enter amount in grams.." />
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" class="submit-button" value="Create Food Item" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Potato</p>
+                <p>93 kcal per 100 grams</p>
+                <p>High Usage</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://target.scene7.com/is/image/Target/GUEST_c58aff39-9071-4f1b-a270-5d00f41a0db4?wid=488&hei=488&fmt=pjpeg" />
+                    </div>
+                    <textarea class="item-description">The potato (also referred to as tater, tattie, and spud) is a root vegetable that is part of the plant Solanum tuberosum. This perennial is part of the family Solanaceae or the nightshades. In many contexts, the word potato refers to the edible starchy tuber portion of the plant, but it can also refer to the plant itself, which is native to the Americas.A raw potato is 79% water, 17% carbohydrates (88% is starch), 2% protein, and contains negligible fat (see table). In an amount measuring 100 grams (3.5 oz), raw potato provides 322 kilojoules (77 kilocalories) of energy and is a rich source of vitamin B6 and vitamin C (23% and 24% of the Daily Value, respectively), with no other vitamins or minerals in significant amount. The potato is rarely eaten raw because raw potato starch is poorly digested by humans. When a potato is baked, its contents of vitamin B6 and vitamin C decline notably, while there is little significant change in the amount of other nutrients.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="potatoName">Name:</label>
+                    <input type="text" name="potatoName" id="potatoName" value="Potato" />
+                    <div class="elements">
+                        <div class="micro-elements">
+                            <h6>Micro Elements (in mg.):</h6>
+                            <label for="potatoB1">Vitamin B1:</label>
+                            <input type="number" name="potatoB1" id="potatoB1" value="100" />
+                            <label for="potatoB2">Vitamin B2:</label>
+                            <input type="number" name="potatoB2" id="potatoB2" value="200" />
+                            <label for="potatoB3">Vitamin B3:</label>
+                            <input type="number" name="potato3" id="potato3" value="200" />
+                            <label for="potatoB5">Vitamin B5:</label>
+                            <input type="number" name="potatoB5" id="potatoB5" value="0" />
+                            <label for="potatoB6">Vitamin B6:</label>
+                            <input type="number" name="potatoB6" id="potatoB6" value="300" />
+                            <label for="potatoB9">Vitamin B9:</label>
+                            <input type="number" name="potatoB9" id="potatoB9" value="111" />
+                            <label for="potatoB12">Vitamin B12:</label>
+                            <input type="number" name="potatoB12" id="potatoB12" value="222" />
+                            <label for="potatoC" Vitamin>C:</label>
+                            <input type="number" name="potatoC" id="potatoC" value="222" />
+                            <label for="potatoE">Vitamin E:</label>
+                            <input type="number" name="potatoE" id="potatoE" value="333" />
+                            <label for="potatoA">Vitamin A:</label>
+                            <input type="number" name="potatoA" id="potatoA" value="897" />
+                            <label for="potatoD">Vitamin D:</label>
+                            <input type="number" name="potatoD" id="potatoD" value="456" />
+                            <label for="potatoPotass">Potassium:</label>
+                            <input type="number" name="potatoPotass" id="potatoPotass" value="111" />
+                            <label for="potatoSodium">Sodium:</label>
+                            <input type="number" name="potatoSodium" id="potatoSodium" value="323" />
+                            <label for="potatoIron">Iron:</label>
+                            <input type="number" name="potatoIron" id="potatoIron" value="321" />
+                            <label for="potatoZinc">Zinc:</label>
+                            <input type="number" name="potatoZinc" id="potatoZinc" value="321" />
+                            <label for="potatoMagne">Magnesium:</label>
+                            <input type="number" name="potatoMagne" id="potatoMagne" value="321" />
+                        </div>
+                        <div class="macro-elements">
+                            <h6>Macro Elements (in grams):</h6>
+                            <label for="potatoCarb">Carbohydrates:</label>
+                            <input type="number" name="potatoCarb" id="potatoCarb" value="20" />
+                            <label for="potatoFat">Fats:</label>
+                            <input type="number" name="potatoFat" id="potatoFat" value="3" />
+                            <label for="potatoProt">Protein:</label>
+                            <input type="number" name="potatoProt" id="potatoProt" value="2" />
+                            <label for="potatoWater">Water:</label>
+                            <input type="number" name="potatoWater" id="potatoWater" value="70" />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submit-button" value="Edit Food Item" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Tomato</p>
+                <p>18 kcal per 100 grams</p>
+                <p>High Usage</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://edge.bonnieplants.com/www/uploads/20180920003719/debut-tomato.jpg" />
+                    </div>
+                    <textarea class="item-description">The tomato is the edible, often red, berry of the plant Solanum lycopersicum,[2][1] commonly known as a tomato plant. The species originated in western South America and Central America.[2][3] The Nahuatl (Aztec language) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived.[3][4] Its domestication and use as a cultivated food may have originated with the indigenous peoples of Mexico.[2][5] The Aztecs used tomatoes in their cooking at the time of the Spanish conquest of the Aztec Empire, and after the Spanish encountered the tomato for the first time after their contact with the Aztecs, they brought the plant to Europe. From there, the tomato was introduced to other parts of the European-colonized world during the 16th century. A tomato is 95% water, contains 4% carbohydrates and less than 1% each of fat and protein (table). In a 100 gram amount, raw tomatoes supply 18 calories and are a moderate source of vitamin C (17% of the Daily Value), but otherwise are absent of significant nutrient content.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="tomatoName">Name:</label>
+                    <input type="text" name="tomatoName" id="tomatoName" value="Tomato" />
+                    <div class="elements">
+                        <div class="micro-elements">
+                            <h6>Micro Elements (in mg.):</h6>
+                            <label for="tomatoB1">Vitamin B1:</label>
+                            <input type="number" name="tomatoB1" id="tomatoB1" value="100" />
+                            <label for="tomatoB2">Vitamin B2:</label>
+                            <input type="number" name="tomatoB2" id="tomatoB2" value="200" />
+                            <label for="tomatoB3">Vitamin B3:</label>
+                            <input type="number" name="tomatoB3" id="tomatoB3" value="200" />
+                            <label for="tomatoB5">Vitamin B5:</label>
+                            <input type="number" name="tomatoB5" id="tomatoB5" value="0" />
+                            <label for="tomatoB6">Vitamin B6:</label>
+                            <input type="number" name="tomatoB6" id="tomatoB6" value="300" />
+                            <label for="tomatoB9">Vitamin B9:</label>
+                            <input type="number" name="tomatoB9" id="tomatoB9" value="111" />
+                            <label for="tomatoB12">Vitamin B12:</label>
+                            <input type="number" name="tomatoB12" id="tomatoB12" value="222" />
+                            <label for="tomatoC" Vitamin>C:</label>
+                            <input type="number" name="tomatoC" id="tomatoC" value="222" />
+                            <label for="tomatoE">Vitamin E:</label>
+                            <input type="number" name="tomatoE" id="tomatoE" value="333" />
+                            <label for="tomatoA">Vitamin A:</label>
+                            <input type="number" name="tomatoA" id="tomatoA" value="897" />
+                            <label for="tomatoD">Vitamin D:</label>
+                            <input type="number" name="tomatoD" id="tomatoD" value="456" />
+                            <label for="tomatoPotass">Potassium:</label>
+                            <input type="number" name="tomatoPotass" id="tomatoPotass" value="111" />
+                            <label for="tomatoSodium">Sodium:</label>
+                            <input type="number" name="tomatoSodium" id="tomatoSodium" value="323" />
+                            <label for="tomatoIron">Iron:</label>
+                            <input type="number" name="tomatoIron" id="tomatoIron" value="321" />
+                            <label for="tomatoZinc">Zinc:</label>
+                            <input type="number" name="tomatoZinc" id="tomatoZinc" value="321" />
+                            <label for="tomatoMagne">Magnesium:</label>
+                            <input type="number" name="tomatoMagne" id="tomatoMagne" value="321" />
+                        </div>
+                        <div class="macro-elements">
+                            <h6>Macro Elements (in grams):</h6>
+                            <label for="tomatoCarb">Carbohydrates:</label>
+                            <input type="number" name="tomatoCarb" id="tomatoCarb" value="20" />
+                            <label for="tomatoFat">Fats:</label>
+                            <input type="number" name="tomatoFat" id="tomatoFat" value="3" />
+                            <label for="tomatoProt">Protein:</label>
+                            <input type="number" name="tomatoProt" id="tomatoProt" value="2" />
+                            <label for="tomatoWater">Water:</label>
+                            <input type="number" name="tomatoWater" id="tomatoWater" value="70" />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submit-button" value="Edit Food Item" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Cucumber</p>
+                <p>12 kcal per 100 grams</p>
+                <p>Medium Usage</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/cucumbers2.jpg?itok=YISLeW4e" />
+                    </div>
+                    <textarea class="item-description">The tomato is the edible, often red, berry of the plant Solanum lycopersicum,[2][1] commonly known as a tomato plant. The species originated in western South America and Central America.[2][3] The Nahuatl (Aztec language) word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived.[3][4] Its domestication and use as a cultivated food may have originated with the indigenous peoples of Mexico.[2][5] The Aztecs used tomatoes in their cooking at the time of the Spanish conquest of the Aztec Empire, and after the Spanish encountered the tomato for the first time after their contact with the Aztecs, they brought the plant to Europe. From there, the tomato was introduced to other parts of the European-colonized world during the 16th century. A tomato is 95% water, contains 4% carbohydrates and less than 1% each of fat and protein (table). In a 100 gram amount, raw tomatoes supply 18 calories and are a moderate source of vitamin C (17% of the Daily Value), but otherwise are absent of significant nutrient content.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="cucmbName">Name:</label>
+                    <input type="text" name="cucmbName" id="cucmbName" value="Cucumber" />
+                    <div class="elements">
+                        <div class="micro-elements">
+                            <h6>Micro Elements (in mg.):</h6>
+                            <label for="cucmbB1">Vitamin B1:</label>
+                            <input type="number" name="cucmbB1" id="cucmbB1" value="100" />
+                            <label for="cucmbB2">Vitamin B2:</label>
+                            <input type="number" name="cucmbB2" id="cucmbB2" value="200" />
+                            <label for="cucmbB3">Vitamin B3:</label>
+                            <input type="number" name="cucmbB3" id="cucmbB3" value="200" />
+                            <label for="cucmbB5">Vitamin B5:</label>
+                            <input type="number" name="cucmbB5" id="cucmbB5" value="0" />
+                            <label for="cucmbB6">Vitamin B6:</label>
+                            <input type="number" name="cucmbB6" id="cucmbB6" value="300" />
+                            <label for="cucmbB9">Vitamin B9:</label>
+                            <input type="number" name="cucmbB9" id="cucmbB9" value="111" />
+                            <label for="cucmbB12">Vitamin B12:</label>
+                            <input type="number" name="cucmbB12" id="cucmbB12" value="222" />
+                            <label for="cucmbC" Vitamin>C:</label>
+                            <input type="number" name="cucmbC" id="cucmbC" value="222" />
+                            <label for="cucmbE">Vitamin E:</label>
+                            <input type="number" name="cucmbE" id="cucmbE" value="333" />
+                            <label for="cucmbA">Vitamin A:</label>
+                            <input type="number" name="cucmbA" id="cucmbA" value="897" />
+                            <label for="cucmbD">Vitamin D:</label>
+                            <input type="number" name="cucmbD" id="cucmbD" value="456" />
+                            <label for="cucmbPotass">Potassium:</label>
+                            <input type="number" name="cucmbPotass" id="cucmbPotass" value="111" />
+                            <label for="cucmbSodium">Sodium:</label>
+                            <input type="number" name="cucmbSodium" id="cucmbSodium" value="323" />
+                            <label for="cucmbIron">Iron:</label>
+                            <input type="number" name="cucmbIron" id="cucmbIron" value="321" />
+                            <label for="cucmbZinc">Zinc:</label>
+                            <input type="number" name="cucmbZinc" id="cucmbZinc" value="321" />
+                            <label for="cucmbMagne">Magnesium:</label>
+                            <input type="number" name="cucmbMagne" id="cucmbMagne" value="321" />
+                        </div>
+                        <div class="macro-elements">
+                            <h6>Macro Elements (in grams):</h6>
+                            <label for="cucmbCarb">Carbohydrates:</label>
+                            <input type="number" name="cucmbCarb" id="cucmbCarb" value="20" />
+                            <label for="cucmbFat">Fats:</label>
+                            <input type="number" name="cucmbFat" id="cucmbFat" value="3" />
+                            <label for="cucmbProt">Protein:</label>
+                            <input type="number" name="cucmbProt" id="cucmbProt" value="2" />
+                            <label for="cucmbWater">Water:</label>
+                            <input type="number" name="cucmbWater" id="cucmbWater" value="70" />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submit-button" value="Edit Food Item" />
+            </form>
+        </li>
+        <li>
+            <div class="toggle-area">
+                <p>Yogurt</p>
+                <p>61 kcal per 100 grams</p>
+                <p>Low Usage</p>
+            </div>
+
+            <form class="on-click-area">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18183809/051141069-01-homemade-yogurt-recipe-main.jpg" />
+                    </div>
+                    <textarea class="item-description">Yogurt (/ˈjoʊɡərt/ or /ˈjɒɡərt/; from Turkish: yoğurt), also spelled yoghurt, yogourt or yoghourt, is a food produced by bacterial fermentation of milk.[1] The bacteria used to make yogurt are known as yogurt cultures. The fermentation of lactose by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.[1] Cow's milk is commonly available worldwide and, as such, is the milk most commonly used to make yogurt. Milk from water buffalo, goats, ewes, mares, camels, and yaks is also used to produce yogurt where available locally. The milk used may be homogenized or not, even pasteurized or raw. Each type of milk produces substantially different results.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="yogName">Name:</label>
+                    <input type="text" name="yogName" id="yogName" value="Yogurt" />
+                    <div class="elements">
+                        <div class="micro-elements">
+                            <h6>Micro Elements (in mg.):</h6>
+                            <label for="yogB1">Vitamin B1:</label>
+                            <input type="number" name="yogB1" id="yogB1" value="100" />
+                            <label for="yogB2">Vitamin B2:</label>
+                            <input type="number" name="yogB2" id="yogB2" value="200" />
+                            <label for="yogB3">Vitamin B3:</label>
+                            <input type="number" name="yogB3" id="yogB3" value="200" />
+                            <label for="yogB5">Vitamin B5:</label>
+                            <input type="number" name="yogB5" id="yogB5" value="0" />
+                            <label for="yogB6">Vitamin B6:</label>
+                            <input type="number" name="yogB6" id="yogB6" value="300" />
+                            <label for="yogB9">Vitamin B9:</label>
+                            <input type="number" name="yogB9" id="yogB9" value="111" />
+                            <label for="yogB12">Vitamin B12:</label>
+                            <input type="number" name="yogB12" id="yogB12" value="222" />
+                            <label for="yogC" Vitamin>C:</label>
+                            <input type="number" name="yogC" id="yogC" value="222" />
+                            <label for="yogE">Vitamin E:</label>
+                            <input type="number" name="yogE" id="yogE" value="333" />
+                            <label for="yogA">Vitamin A:</label>
+                            <input type="number" name="yogA" id="yogA" value="897" />
+                            <label for="yogD">Vitamin D:</label>
+                            <input type="number" name="yogD" id="yogD" value="456" />
+                            <label for="yogPotass">Potassium:</label>
+                            <input type="number" name="yogPotass" id="yogPotass" value="111" />
+                            <label for="yogSodium">Sodium:</label>
+                            <input type="number" name="yogSodium" id="yogSodium" value="323" />
+                            <label for="yogIron">Iron:</label>
+                            <input type="number" name="yogIron" id="yogIron" value="321" />
+                            <label for="yogZinc">Zinc:</label>
+                            <input type="number" name="yogZinc" id="yogZinc" value="321" />
+                            <label for="yogMagne">Magnesium:</label>
+                            <input type="number" name="yogMagne" id="yogMagne" value="321" />
+                        </div>
+                        <div class="macro-elements">
+                            <h6>Macro Elements (in grams):</h6>
+                            <label for="yogCarb">Carbohydrates:</label>
+                            <input type="number" name="yogCarb" id="yogCarb" value="20" />
+                            <label for="yogFat">Fats:</label>
+                            <input type="number" name="yogFat" id="yogFat" value="3" />
+                            <label for="yogProt">Protein:</label>
+                            <input type="number" name="yogProt" id="yogProt" value="2" />
+                            <label for="yogWater">Water:</label>
+                            <input type="number" name="yogWater" id="yogWater" value="70" />
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submit-button" value="Edit Food Item" />
+            </form>
+        </li>
+    </ul>
+</section>
