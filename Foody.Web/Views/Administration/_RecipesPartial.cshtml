@@ -3,3 +3,119 @@
 
     <input type="search" name="itemSearch" id="itemSearch" placeholder="Please enter the name of the desired recipe.." />
 </section>
+
+<section class="items-area">
+    <h4>Recipes</h4>
+
+    <ul>
+        <li class="items-area-item">
+            <div class="toggle-area">
+                <h5>Add new Recipe</h5>
+            </div>
+
+            <form class="on-click-area" action="#">
+                <div class="image-and-description">
+                    <textarea placeholder="Please enter a short description" class="item-description new-item-description"></textarea>
+                </div>
+
+                <div class="data">
+                    <label for="newItemName">Name:</label>
+                    <input type="text" name="newItemName" id="newItemName" placeholder="Enter the recipes's name.." />
+                    <label for="newItemImageUrl">Image URL:</label>
+                    <input type="text" name="newItemImageUrl" id="newItemImageUrl" placeholder="Enter the recipes's image url.." />
+
+                    <h6 class="recipe-head">Recipe content (food items in grams):</h6>
+
+                    <ul class="food-items">
+                        <li class="food-item">
+                            <button class="remove-button">Remove</button>
+                            <select name="1|ItemNewRecipe" id="1|ItemNewRecipe">
+                                <option value="potato">Potatoes</option>
+                                <option value="tomato">Tomatoes</option>
+                                <option value="eggs">Eggs</option>
+                                <option value="flour">Flour</option>
+                                <option value="oliveOil">Olive Oil</option>
+                                <option value="tableSalt">Table Salt</option>
+                                <option value="garlic">Garlic</option>
+                            </select>
+                            <input type="number" name="1|AmountNewRecipe" id="1|AmountNewRecipe" placeholder="Please enter amount.." />
+                        </li>
+                        <li class="food-item">
+                            <button class="remove-button">Remove</button>
+                            <select name="2|ItemNewRecipe" id="2|ItemNewRecipe">
+                                <option value="potato">Potatoes</option>
+                                <option value="tomato">Tomatoes</option>
+                                <option value="eggs">Eggs</option>
+                                <option value="flour">Flour</option>
+                                <option value="oliveOil">Olive Oil</option>
+                                <option value="tableSalt">Table Salt</option>
+                                <option value="garlic">Garlic</option>
+                            </select>
+                            <input type="number" name="2|AmountNewRecipe" id="2|AmountNewRecipe" placeholder="Please enter amount.." />
+                        </li>
+                    </ul>
+
+                    <button class="add-button">Add Food Item</button>
+                </div>
+
+                <input type="submit" class="submit-button" value="Create Recipe" />
+            </form>
+        </li>
+        <li class="items-area-item">
+            <div class="toggle-area">
+                <p class="name-search">Musaka</p>
+                <p>235 kcal per 100 grams</p>
+                <p>High Usage</p>
+            </div>
+
+            <form class="on-click-area" action="#">
+                <div class="image-and-description">
+                    <div class="image-container">
+                        <img src="http://greeceanditaly.com/wp-content/uploads/2018/09/Moussaka-recipe-Traditional-Greek-Moussaka-with-Eggplants-800x530.jpg" />
+                    </div>
+                    <textarea class="item-description">Moussaka is an eggplant- or potato-based dish, often including ground meat, in the Levant, Middle East, and Balkans, with many local and regional variations. The most famous version of the dish today appeared in the 1920s with the publishing of Nikolaos Tselementes' culinary book in Greece.</textarea>
+                </div>
+
+                <div class="data">
+                    <label for="musakaName">Name:</label>
+                    <input type="text" name="musakaName" id="musakaName" value="Musaka" />
+
+                    <h6 class="recipe-head">Recipe content (food items in grams):</h6>
+
+                    <ul class="food-items">
+                        <li class="food-item">
+                            <button class="remove-button">Remove</button>
+                            <select name="1|Itemmusaka" id="1|Itemmusakae">
+                                <option value="potato" selected>Potatoes</option>
+                                <option value="tomato">Tomatoes</option>
+                                <option value="eggs">Eggs</option>
+                                <option value="flour">Flour</option>
+                                <option value="oliveOil">Olive Oil</option>
+                                <option value="tableSalt">Table Salt</option>
+                                <option value="garlic">Garlic</option>
+                            </select>
+                            <input type="number" name="1|Amountmusaka" id="1|Amountmusaka" value="200" />
+                        </li>
+                        <li class="food-item">
+                            <button class="remove-button">Remove</button>
+                            <select name="2|Itemmusaka" id="2|Itemmusaka">
+                                <option value="potato">Potatoes</option>
+                                <option value="tomato">Tomatoes</option>
+                                <option value="eggs" selected>Eggs</option>
+                                <option value="flour">Flour</option>
+                                <option value="oliveOil">Olive Oil</option>
+                                <option value="tableSalt">Table Salt</option>
+                                <option value="garlic">Garlic</option>
+                            </select>
+                            <input type="number" name="2|Amountmusaka" id="2|Amountmusaka" value="120" />
+                        </li>
+                    </ul>
+
+                    <button class="add-button">Add Food Item</button>
+                </div>
+
+                <input type="submit" class="submit-button" value="Edit Recipe" />
+            </form>
+        </li>
+    </ul>
+</section>

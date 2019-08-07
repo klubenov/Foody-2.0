@@ -54,7 +54,102 @@
                 });
             });
         </script>
-    }
+
+        <script>
+            function ChangeId(input, iterator) {
+                let decomposedInput = input.split('|');
+                decomposedInput[0] = iterator + '|';
+                console.log(decomposedInput);
+                result = decomposedInput.join('');
+                return result;
+            }
+
+            function UpdateFoodItem(foodItem, id) {
+                let foodItemNameElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'SELECT')[0];
+                let foodItemAmountElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'INPUT')[0];
+
+                foodItemNameElement.setAttribute('name', ChangeId(foodItemNameElement.getAttribute('name'), id));
+                foodItemNameElement.setAttribute('id', ChangeId(foodItemNameElement.getAttribute('id'), id));
+
+                foodItemAmountElement.setAttribute('name', ChangeId(foodItemAmountElement.getAttribute('name'), id));
+                foodItemAmountElement.setAttribute('id', ChangeId(foodItemAmountElement.getAttribute('id'), id));
+            }
+
+            function ReEnumerateRecipe(recipeUl) {
+                let foodItems = Array.from(recipeUl.childNodes).filter(c => c.tagName === 'LI');
+
+                for (let i = 0; i < foodItems.length; i++) {
+                    let foodItem = foodItems[i];
+
+                    UpdateFoodItem(foodItem, i + 1);
+                }
+            }
+
+            let removeButtons = document.querySelectorAll('.remove-button');
+
+            removeButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let parent = event.target.parentNode;
+                    let upperParent = parent.parentNode;
+                    upperParent.removeChild(parent);
+                    ReEnumerateRecipe(upperParent);
+                });
+            });
+
+            let addButtons = document.querySelectorAll('.add-button');
+
+            addButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let parent = event.target.parentNode;
+                    let foodItemsUl = Array.from(parent.childNodes).filter(c => c.tagName === 'UL')[0];
+                    let foodItems = Array.from(foodItemsUl.childNodes).filter(c => c.tagName === 'LI');
+                    let lastFoodItem = foodItems[foodItems.length - 1];
+
+                    let newFoodItem = lastFoodItem.cloneNode(true);
+                    UpdateFoodItem(newFoodItem, foodItems.length + 1);
+
+                    newFoodItem.querySelector('.remove-button').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        let parent = event.target.parentNode;
+                        let upperParent = parent.parentNode;
+                        upperParent.removeChild(parent);
+                        ReEnumerateRecipe(upperParent);
+                    });
+
+                    foodItemsUl.appendChild(newFoodItem);
+                });
+            });
+        </script>
+
+        <script>
+            let searchInput = document.getElementById('itemSearch');
+
+            searchInput.addEventListener('input', function () {
+                let nameElements = Array.from(document.getElementsByClassName('name-search'));
+
+                if (searchInput.value) {
+                    nameElements.forEach(function (nameElement) {
+                        let listItem = nameElement.parentNode.parentNode;
+                        let name = nameElement.innerHTML;
+
+                        if (!name.toLowerCase().includes(searchInput.value.toLowerCase())) {
+                            listItem.setAttribute('style', 'display:none');
+                        } else {
+                            listItem.setAttribute('style', 'display:block');
+                        }
+                    });
+                } else {
+                    nameElements.forEach(function (nameElement) {
+                        let listItem = nameElement.parentNode.parentNode;
+
+                        listItem.setAttribute('style', 'display:block');
+                    });
+                }
+            });
+        </script>
+     }
 }
 
 

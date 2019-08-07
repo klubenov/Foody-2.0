@@ -4,10 +4,13 @@
 
 .menu-bar h3 {
     color: var(--template-primary-color, blue);
-    flex-basis: 25%;
     padding: 2em 1em 2em 1em;
     text-align: center;
     line-height: 2em;
+}
+
+.menu-bar {
+    flex-basis: 25%;
 }
 
 .menu-list li {
@@ -19,7 +22,7 @@
     text-decoration: none;
     padding: 1em 6em 1em 1em;
     background-color: var(--template-primary-color, blue);
-    border: 2px solid var(--template-primary-color, blue);
+    border: 3px solid var(--template-primary-color, blue);
     color: white;
     font-weight: 900;
     position: relative;
@@ -32,6 +35,8 @@
     border-color: var(--template-primary-color-invert, yellow);
     font-size: 1.1em;
     border-width: 3px;
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
 }
 
 a.clicked-item:after {
@@ -90,7 +95,7 @@ a.clicked-item:after {
     text-align: center;
 }
 
-.items-area li {
+.items-area .items-area-item {
     list-style: none outside;
     border: 2px solid var(--template-secondary-color, green);
     border-radius: 0.3em;
@@ -141,7 +146,7 @@ a.clicked-item:after {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1.4em;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     font-size: 1em;
     background-color: var(--template-primary-color, blue);
     color: white;
@@ -158,6 +163,16 @@ a.clicked-item:after {
 .menu-option .data label,
 .menu-option .data input {
     flex: 0 0 60%;
+}
+
+.menu-option .data .recipe-head {
+    flex: 0 0 90%;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.menu-option .data .food-items {
+    flex: 0 0 90%;
 }
 
 .menu-option .data .elements {
@@ -214,4 +229,41 @@ a.clicked-item:after {
 
 .menu-option .image-and-description .item-description.new-item-description {
     flex-grow: 1;
+}
+
+.menu-option .food-item {
+    list-style: none outside;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+}
+
+.menu-option .food-item button {
+    flex: 0 0 10%;
+}
+
+.menu-option .food-item select{
+    flex: 0 0 40%;
+}
+
+.menu-option .food-item input {
+    flex: 0 0 20%;
+}
+
+.add-button,
+.remove-button {
+    padding: 0.5em 1em;
+    border-radius: 0.2em;   
+}
+
+.remove-button {
+    border: 1px solid var(--template-secodary-color-invert, red);
+    background-color: var(--template-secodary-color-invert, red);
+    color: white;
+}
+
+.add-button {
+    border: 1px solid var(--template-secodary-color, green);
+    background-color: var(--template-secodary-color, green);
+    color: white;
 }
