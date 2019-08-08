@@ -1,0 +1,271 @@
+﻿.menu {
+    display: flex;
+}
+
+.menu-bar {
+    flex-basis: 25%;
+
+    & h3 {
+        color: var(--template-primary-color, blue);
+        padding: 2em 1em 2em 1em;
+        text-align: center;
+        line-height: 2em;
+    }
+}
+
+.menu-list {
+    & li {
+        list-style: none outside;
+
+        &:first-child a {
+            border-top-left-radius: 0.6em;
+        }
+
+        &:last-child a {
+            border-bottom-left-radius: 0.6em;
+        }
+    }
+
+    & a {
+        display: block;
+        text-decoration: none;
+        padding: 1em 6em 1em 1em;
+        background-color: var(--template-primary-color, blue);
+        border: 3px solid var(--template-primary-color, blue);
+        color: white;
+        font-weight: 900;
+        position: relative;
+    }
+
+    & .clicked-item {
+        background-color: white;
+        border-right: none;
+        color: var(--template-primary-color, blue);
+        border-color: var(--template-primary-color-invert, yellow);
+        font-size: 1.1em;
+        border-width: 3px;
+        padding-top: 0.85em;
+        padding-bottom: 0.85em;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 3px;
+            z-index: 10;
+            background-color: white;
+        }
+    }
+}
+
+
+.menu-option {
+    flex: 1 0 75%;
+    display: none;
+    border: 3px solid var(--template-primary-color-invert, yellow);
+    border-radius: 0.6em;
+    transform: translateX(-3px);
+    overflow: hidden;
+    margin-bottom: 2em;
+
+    & .search-area {
+        text-align: center;
+        padding: 1em;
+        border-bottom: 2px solid var(--template-primary-color, blue);
+
+        & input {
+            width: 50%;
+            padding: 0.2em;
+            border-radius: 0.2em;
+        }
+    }
+
+    & .items-area {
+        padding: 0.8em;
+        padding-top: 1em;
+
+        & h4 {
+            padding: 1em 0 2em 0;
+            text-align: center;
+        }
+
+        & h5 {
+            text-align: center;
+        }
+
+        & .items-area-item {
+            list-style: none outside;
+            border: 2px solid var(--template-secondary-color, green);
+            border-radius: 0.3em;
+            margin-bottom: 0.3em;
+        }
+    }
+
+    & .toggle-area {
+        display: flex;
+        justify-content: space-around;
+        background-color: #f8f8f8;
+        padding: 0.6em 3em;
+
+        & p {
+            flex-basis: 33%;
+            text-align: center;
+        }
+
+        &:hover {
+            background-color: #b4b4b4;
+        }
+    }
+
+    & .on-click-area {
+        display: none;
+        padding: 1em;
+        border-top: 2px solid var(--template-primary-color, blue);
+
+        &.clicked-area {
+            display: block;
+        }
+
+        & .data {
+            border-bottom: 2px solid #b4b4b4;
+            padding: 2em 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            & label {
+                flex: 0 0 60%;
+                padding: 0.3em 0;
+                font-size: 0.9em;
+            }
+
+            & input {
+                flex: 0 0 60%;
+                padding: 0.3em;
+                border: 1px solid #b4b4b4;
+                border-radius: 0.2em;
+            }
+
+            & .recipe-head {
+                flex: 0 0 90%;
+                text-align: center;
+                padding: 1em 0;
+            }
+
+            & .food-items {
+                flex: 0 0 90%;
+            }
+
+            & .elements {
+                flex: 0 0 80%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border-top: 2px solid #b4b4b4;
+                padding-top: 1em;
+                margin-top: 2em;
+
+                & label {
+                    flex-basis: 1em;
+                }
+
+                & input {
+                    flex-basis: 1em;
+                }
+
+                & .macro-elements {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 0 48%;
+                }
+
+                & .micro-elements {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 0 48%;
+                }
+            }
+
+            & .food-item {
+                list-style: none outside;
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 1.5em;
+
+                & button {
+                    flex: 0 0 10%;
+                }
+
+                & select {
+                    flex: 0 0 40%;
+                }
+
+                & input {
+                    flex: 0 0 20%;
+                }
+            }
+
+            & .add-button {
+                padding: 0.5em 1em;
+                border-radius: 0.2em;
+                border: 1px solid var(--template-secodary-color, green);
+                background-color: var(--template-secodary-color, green);
+                color: white;
+            }
+
+            & .remove-button {
+                padding: 0.5em 1em;
+                border-radius: 0.2em;
+                border: 1px solid var(--template-secodary-color-invert, red);
+                background-color: var(--template-secodary-color-invert, red);
+                color: white;
+            }
+        }
+
+        & .image-and-description {
+            border-bottom: 2px solid #b4b4b4;
+            padding: 2em 0;
+            display: flex;
+            justify-content: space-between;
+
+            & .item-description {
+                width: 100%;
+                min-height: 6em;
+                padding: 0.5em;
+
+                &.new-item-description {
+                    flex-grow: 1;
+                }
+            }
+
+            & .image-container {
+                flex: 0 0 48%;
+
+                & img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            & textarea {
+                flex: 0 0 48%;
+            }
+        }
+
+        & .submit-button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1.4em;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            background-color: var(--template-primary-color, blue);
+            color: white;
+            border: 1px solid var(--template-primary-color, blue);
+            border-radius: 0.2em;
+        }
+    }
+}
