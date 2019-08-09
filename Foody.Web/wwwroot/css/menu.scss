@@ -65,6 +65,7 @@
         border-width: 3px;
         padding-top: 0.85em;
         padding-bottom: 0.85em;
+        animation: menu-list-clicked-item-slide 0.3s ease-out;
 
         &:after {
             content: '';
@@ -92,6 +93,7 @@
     transform: translateX(-3px);
     overflow: hidden;
     margin-bottom: 2em;
+    animation: menu-option-slide 0.3s ease-out;
 
     & .search-area {
         text-align: center;
@@ -123,6 +125,7 @@
             border: 2px solid var(--template-secondary-color, green);
             border-radius: 0.3em;
             margin-bottom: 0.3em;
+            overflow: hidden;
         }
     }
 
@@ -149,6 +152,7 @@
 
         &.clicked-area {
             display: block;
+            animation: menu-option-on-click-area-drop 0.3s ease-out;
         }
 
         & .data {

@@ -17,6 +17,10 @@
             border: solid 2px #000;
             margin: 0.8em 0;
             font-size: 1.5em;
+
+            &.selected {
+                transform: translateY(0.3em);
+            }
         }
 
         &:nth-child(1) {
@@ -26,7 +30,7 @@
                 border-top-left-radius: 0.5em;
                 border-color: var(--template-secondary-color, green);
 
-                &:hover, &:focus {
+                &:hover, &:focus, &.selected {
                     background-color: white;
                     transition-duration: 0.3s;
                     color: var(--template-primary-color, blue);
@@ -40,10 +44,10 @@
 
         &:nth-child(2) {
             & .type-selector-button {
-                background-color: var(--template-primary-color-invert, yellow);
-                border-color: var(--template-primary-color-invert, yellow);
+                background-color: var(--template-secondary-color-invert, red);
+                border-color: var(--template-secondary-color-invert, red);
 
-                &:hover, &:focus {
+                &:hover, &:focus, &.selected {
                     background-color: white;
                     transition-duration: 0.3s;
                     color: var(--template-primary-color, blue);
@@ -57,10 +61,10 @@
 
         &:nth-child(3) {
             & .type-selector-button {
-                background-color: var(--template-secondary-color-invert, red);
-                border-color: var(--template-secondary-color-invert, red);
+                background-color: var(--template-primary-color-invert, yellow);
+                border-color: var(--template-primary-color-invert, yellow);
 
-                &:hover, &:focus {
+                &:hover, &:focus, &.selected {
                     background-color: white;
                     transition-duration: 0.3s;
                     color: var(--template-primary-color, blue);
@@ -82,7 +86,7 @@
                 border-top-right-radius: 0.5em;
                 border-color: var(--template-primary-color, blue);
 
-                &:hover, &:focus {
+                &:hover, &:focus, &.selected {
                     background-color: white;
                     transition-duration: 0.3s;
                     color: var(--template-primary-color, blue);
@@ -164,11 +168,12 @@
             }
 
             &.exercise {
-                border-color: var(--template-primary-color-invert, yellow);
+                border-color: var(--template-secondary-color-invert, red);
             }
 
             &.lifestyle {
                 border-color: var(--template-secondary-color-invert, red);
+                border-color: var(--template-primary-color-invert, yellow);
             }
 
             & a {
@@ -208,5 +213,39 @@
                 }
             }
         }
+    }
+}
+
+.topic-suggest {
+    display: flex;
+    padding: 3em;
+    background-color: #add8e6;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 1em;
+
+    & > i {
+        flex: 0 0 20%;
+        font-size: 8em;
+        text-align: center;
+        align-content: center;
+    }
+
+    & p {
+        flex: 0 0 60%;
+        font-size: 1.4em;
+        font-style: italic;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &:before {
+        position: absolute;
+        top: -15%;
+        border: 2px solid var(--template-primary-color, blue);
+        content: '';
+        width: 20%;
+        left: 40%;
+        border-radius: 6px;
     }
 }
