@@ -1,5 +1,6 @@
 ﻿@import "variables";
 @import "animations";
+@import "landing";
 @import "typography";
 @import "navigation";
 @import "menu";
@@ -34,7 +35,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 11;
+    z-index: 100;
 }
 
 .site-content {

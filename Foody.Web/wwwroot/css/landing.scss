@@ -1,0 +1,108 @@
+﻿.landing {
+    display: flex;
+    flex-direction: column;
+
+    & .heading, & .site-sections-container {
+        flex-basis: 100%;
+    }
+
+    & .heading {
+        position: relative;
+        overflow: hidden;
+        padding: 30% 20%;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            opacity: 0.3;
+            z-index: 15;
+        }
+    }
+
+    & .heading .heading-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10em 2em;
+        display: block;
+        color: white;
+        text-shadow: 3px 3px black;
+        text-align: center;
+        z-index: 20;
+    }
+
+    & .heading img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    & .site-sections-container {
+        display: flex;
+
+        & .section-tab {
+            flex: 1 0 33%;
+            padding: 1em;
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-shadow: 1px 1px black;
+            text-align: center;
+
+            &:hover {
+                opacity: 0.9;
+
+                & h3 {
+                    text-decoration: underline;
+                }
+            }
+
+            & p {
+                padding: 2em 1em;
+            }
+
+            & h3 {
+                position: relative;
+                padding-top: 1em;
+
+                &:after {
+                    position: absolute;
+                    bottom: -15%;
+                    border: 2px solid var(--template-primary-color, blue);
+                    content: '';
+                    width: 20%;
+                    left: 40%;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+        & li {
+            list-style: none outside;
+            padding: 1em 1em;
+        }
+
+        & .section-tab:nth-child(1) {
+            background-color: var(--template-primary-color-invert, yellow);
+        }
+
+        & .section-tab:nth-child(2) {
+            background-color: var(--template-secondary-color-, green);
+        }
+
+        & .section-tab:nth-child(3) {
+            background-color: var(--template-secondary-color-invert, red);
+        }
+    }
+}
