@@ -1,4 +1,5 @@
 ﻿@import "variables";
+@import "mixins";
 @import "animations";
 @import "landing";
 @import "typography";
@@ -27,8 +28,27 @@ body {
 
 .wrapper {
     max-width: 80%;
-    width: 70rem;
     margin: 0 auto;
+
+    @include responsive( desktop-large ) {
+        max-width: 80%;
+        width: 80rem;
+    }
+
+    @include responsive( desktop ) {
+        max-width: 80%;
+        width: 70rem;
+    }
+
+    @include responsive( laptop ) {
+        max-width: 100%;
+        width: 70rem;
+    }
+
+    @include responsive( mobile ) {
+        max-width: 100%;
+        width: 80rem;
+    }
 }
 
 .site-header {
@@ -39,7 +59,15 @@ body {
 }
 
 .site-content {
-    padding-top: 6.5rem;
+    padding-top: 6.4rem;
+
+    @include responsive( phone ) {
+        padding-top: 10.2rem;
+    }
+
+    @include responsive( small-phone ) {
+        padding-top: 6.4rem;
+    }
 }
 
 .site-footer,

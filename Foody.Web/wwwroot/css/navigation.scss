@@ -2,8 +2,36 @@
     display: flex;
     align-items: center;
 
+    @include responsive( phone ) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @include responsive( small-phone ) {
+        position: relative;
+    }
+
     & ul {
         display: flex;
+
+        @include responsive( phone ) {
+            flex-basis: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1em 0;
+        }
+
+        @include responsive( small-phone ) {
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f8f8f8;
+            text-align: center;
+            z-index: 200;
+        }
 
         & a {
             text-decoration: none;
@@ -30,12 +58,12 @@
     & .nav-brand {
         font-size: 2.6em;
         padding: 0.5em 1em;
-        margin-right: 2em;
         text-decoration: none;
         background-color: transparent;
         color: var(--template-primary-color, blue);
         font-weight: 900;
         position: relative;
+        user-select: none;
 
         & span {
             position: absolute;
@@ -48,13 +76,41 @@
             color: var(--template-primary-color-invert, yellow);
             transition-duration: 0.3s;
         }
+
+        &.toggler {
+            cursor: pointer;
+        }
     }
 
     & .nav-right {
         margin-left: auto;
 
         & li {
-            margin: 0.5em 1em;
+            margin: 0.5em;
+
+            @include responsive( phone ) {
+                margin: 0.2em;
+
+                &:first-child {
+                    margin-left: auto;
+                }
+
+                &:last-child {
+                    margin-right: auto;
+                }
+            }
+
+            @include responsive( small-phone ) {
+                margin: 1.5em;
+
+                &:first-child {
+                    margin: 1.5em;
+                }
+
+                &:last-child {
+                    margin: 1.5em;
+                }
+            }
         }
     }
 

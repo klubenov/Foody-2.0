@@ -76,6 +76,41 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
+    <script>
+        function AddNavBrandSmallPhoneEvent() {
+            let navBrandElement = document.getElementsByClassName('nav-brand')[0];
+            navBrandElement.classList.add('toggler');
+            navBrandElement.removeAttribute('href');
+            navBrandElement.addEventListener('click', function NavBrandEventListener(event) {
+                let rightNav = document.querySelector('ul.nav-right');
+                rightNav.setAttribute('style', 'display:flex');
+            });
+        }
+
+        function ResetNavBrand() {
+            let navBrandElement = document.getElementsByClassName('nav-brand')[0];
+            if (navBrandElement.getAttribute('href')) {
+                return;
+            }
+
+            navBrandElement.setAttribute('href', '/');
+            navBrandElement.classList.remove('toggler');
+            //navBrandElement.removeEventListener('click', NavBrandEventListener);
+        }
+
+        if (window.innerWidth <= 480) {
+            AddNavBrandSmallPhoneEvent();
+        }
+
+        window.onresize = function () {
+            if (window.innerWidth <= 480) {
+                AddNavBrandSmallPhoneEvent();
+            } else {
+                ResetNavBrand();
+            }
+        }
+    </script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
