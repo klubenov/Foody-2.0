@@ -2,11 +2,16 @@
     display: flex;
     background-color: lightblue;
     align-items: center;
+    flex-wrap: wrap;
     animation: article-header-drop 0.5s ease-out;
 
     & ul {
         display: flex;
         margin-left: auto;
+
+        @include responsive( small-phone ) {
+            flex-basis: 100%;
+        }
     }
 
     & li {
@@ -18,12 +23,24 @@
             margin: 0.8em 0;
             font-size: 1.5em;
 
+            @include responsive( phone ) {
+                font-size: 1.2em;
+            }
+
+            @include responsive( small-phone ) {
+                font-size: 1.1em;
+            }
+
             &.selected {
                 transform: translateY(0.3em);
             }
         }
 
         &:nth-child(1) {
+            @include responsive( small-phone ) {
+                margin-left: auto;
+            }
+
             & .type-selector-button {
                 background-color: var(--template-secondary-color, green);
                 border-bottom-left-radius: 0.5em;
@@ -79,6 +96,10 @@
         &:nth-child(4) {
             margin-right: 2em;
 
+            @include responsive( small-phone ) {
+                margin-right: auto;
+            }
+
             & .type-selector-button {
                 background-color: var(--template-primary-color, blue);
                 color: white;
@@ -102,6 +123,17 @@
     & h2 {
         margin-left: 2em;
         padding-bottom: 0;
+
+        @include responsive( phone ) {
+            margin-left: 1em;
+            padding-right: 0.2em;
+        }
+
+        @include responsive( small-phone ) {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.5em 0;
+        }
     }
 }
 
@@ -131,6 +163,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
+        @include responsive( phone ) {
+            justify-content: space-around;
+        }
+
         & .article-tab {
             flex: 0 0 48%;
             list-style: none outside;
@@ -139,6 +175,19 @@
             border-radius: 0.5em;
             margin-bottom: 4%;
             display: flex;
+
+            @include responsive( desktop-large ) {
+                flex-basis: 30%;
+                margin-bottom: 3.3%;
+            }
+
+            @include responsive( phone ) {
+                flex-basis: 80%;
+            }
+
+            @include responsive( small-phone ) {
+                flex-basis: 90%;
+            }
 
             &:after {
                 display: block;
@@ -161,19 +210,37 @@
                 right: 0;
                 box-shadow: 1px 2px 21px 10px rgba(0,0,0,0.75);
                 pointer-events: none;
+                transition: 0.3s;
             }
 
             &.nutrition {
                 border-color: var(--template-secondary-color, green);
+
+                &:hover {
+                    background-color: var(--template-secondary-color, green);
+                    opacity: 0.9;
+                    transition: 0.3s;
+                }
             }
 
             &.exercise {
                 border-color: var(--template-secondary-color-invert, red);
+
+                &:hover {
+                    background-color: var(--template-secondary-color-invert, red);
+                    opacity: 0.9;
+                    transition: 0.3s;
+                }
             }
 
             &.lifestyle {
-                border-color: var(--template-secondary-color-invert, red);
                 border-color: var(--template-primary-color-invert, yellow);
+
+                &:hover {
+                    background-color: var(--template-primary-color-invert, yellow);
+                    opacity: 0.9;
+                    transition: 0.3s;
+                }
             }
 
             & a {
@@ -191,6 +258,32 @@
 
                 & .image-container, & .tab-body {
                     flex: 0 0 45%;
+
+                    @include responsive( phone ) {
+                        flex: 0 0 100%;
+                    }
+
+                    @include responsive( desktop-large ) {
+                        flex: 0 0 100%;
+                    }
+                }
+
+                @include responsive( phone ) {
+                    flex-wrap: wrap;
+                    padding: 1.5em;
+
+                    & .tab-body {
+                        padding: 2em 0 1em 0;
+                        font-size: 1.2em;
+                    }
+                }
+
+                @include responsive( desktop-large ) {
+                    flex-wrap: wrap;
+
+                    & .tab-body {
+                        padding: 1em 0;
+                    }
                 }
 
                 & .image-container {
@@ -210,6 +303,7 @@
 
                 & .tab-footer {
                     font-style: italic;
+                    padding-top: 0.5em;
                 }
             }
         }

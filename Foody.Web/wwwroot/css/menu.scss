@@ -1,36 +1,79 @@
 ﻿.menu {
     padding-top: 1.6rem;
     display: flex;
+
+    @include responsive( mobile ) {
+        flex-wrap: wrap;
+        padding: 0.5em;
+    }
+
+    @include responsive( laptop ) {
+        padding: 1em;
+    }
 }
 
 .menu-bar {
     flex-basis: 25%;
+
+    @include responsive( mobile ) {
+        flex-basis: 100%;
+    }
 
     & h3 {
         color: var(--template-primary-color, blue);
         padding: 2em 1em 2em 1em;
         text-align: center;
         line-height: 2em;
+
+        @include responsive( mobile ) {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1em;
+        }
     }
 }
 
 .menu-list {
+    @include responsive( mobile ) {
+        display: flex;
+        flex-basis: 100%;
+    }
+
     & li {
         list-style: none outside;
 
-        &:first-child a {
-            border-top-left-radius: 0.6em;
+        &:first-child {
+
+            & a {
+                border-top-left-radius: 0.6em;
+            }
+
+            @include responsive( mobile ) {
+                margin-left: auto;
+            }
         }
 
-        &:last-child a {
-            border-bottom-left-radius: 0.6em;
+        &:last-child {
+
+            & a {
+                border-bottom-left-radius: 0.6em;
+
+                @include responsive( mobile ) {
+                    border-bottom-left-radius: 0;
+                    border-top-right-radius: 0.6em;
+                }
+            }
+
+            @include responsive( mobile ) {
+                margin-right: auto;
+            }
         }
     }
 
     & a {
         display: block;
         text-decoration: none;
-        padding: 1em 6em 1em 1em;
+        padding: 1em;
         background-color: var(--template-primary-color, blue);
         border: 3px solid var(--template-primary-color, blue);
         color: white;
@@ -45,13 +88,23 @@
             &:after {
                 content: '';
                 position: absolute;
+
+                @include responsive( mobile ) {
+                    left: 0;
+                    top: 100%;
+                    right: 0;
+                    height: 4px;
+                    width: 100%;
+                    transform: translateX(0);
+                }
+
                 top: 0;
                 bottom: 0;
                 right: 0;
                 width: 3px;
+                transform: translateX(3px);
                 z-index: 10;
                 background-color: white;
-                transform: translateX(3px);
             }
         }
     }
@@ -67,9 +120,25 @@
         padding-bottom: 0.85em;
         animation: menu-list-clicked-item-slide 0.3s ease-out;
 
+        @include responsive( mobile ) {
+            border-right: 3px solid var(--template-primary-color-invert, yellow);
+            animation: menu-list-clicked-item-drop 0.3s ease-out;
+        }
+
         &:after {
             content: '';
             position: absolute;
+
+            @include responsive( mobile ) {
+                left: 0;
+                top: 100%;
+                right: 0;
+                height: 3px;
+                width: 100%;
+                transform: translateY(-3px);
+                transform: translateX(0);
+            }
+
             top: 0;
             bottom: 0;
             right: 0;
@@ -84,9 +153,15 @@
     }
 }
 
+.empty-option {
+    flex: 1 0 75%;
+    padding: 20em 2em;
+    animation: menu-option-slide 0.3s ease-out;
+}
+
 
 .menu-option {
-    flex: 1 0 75%;
+    flex: 1 0 70%;
     display: none;
     border: 3px solid var(--template-primary-color-invert, yellow);
     border-radius: 0.6em;
@@ -94,6 +169,16 @@
     overflow: hidden;
     margin-bottom: 2em;
     animation: menu-option-slide 0.3s ease-out;
+
+    @include responsive( mobile ) {
+        flex: 0 0 90%;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateX(0);
+        transform: translateY(-3px);
+        animation: menu-option-rise 0.3s ease-out;
+        animation-fill-mode: forwards;
+    }
 
     & .search-area {
         text-align: center;
@@ -133,7 +218,9 @@
         display: flex;
         justify-content: space-around;
         background-color: #f8f8f8;
-        padding: 0.6em 3em;
+        padding: 0.6em;
+        align-items: center;
+        
 
         & p {
             flex-basis: 33%;
@@ -152,7 +239,11 @@
 
         &.clicked-area {
             display: block;
-            animation: menu-option-on-click-area-drop 0.3s ease-out;
+            animation: menu-option-on-click-area-slide 0.3s ease-out;
+
+            @include responsive( mobile ) {
+                animation: menu-option-on-click-area-rise 0.3s ease-out;
+            }
         }
 
         & .data {

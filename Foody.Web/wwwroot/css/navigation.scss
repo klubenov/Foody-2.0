@@ -42,6 +42,10 @@
             border: 2px solid var(--template-primary-color, blue);
             user-select: none;
 
+            @include responsive( phone ) {
+                padding: 0.3em 0.5em;
+            }
+
             &:hover {
                 background-color: white;
                 color: var(--template-primary-color, blue);

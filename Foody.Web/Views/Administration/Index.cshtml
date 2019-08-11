@@ -20,6 +20,9 @@
             <partial name="@ViewData["Partial"]" />
         }
     </main>
+    <div class="empty-option">
+        <h3>Plase select an option...</h3>
+    </div>
 </div>
 
 
@@ -32,6 +35,7 @@
                 let partial = @ViewData["Partial"];
                 partial.classList.add('clicked-item');
 
+                document.getElementsByClassName('empty-option')[0].setAttribute('style', 'display:none');
                 document.getElementsByClassName('menu-option')[0].setAttribute('style', 'display:block');
             })();
         </script>
