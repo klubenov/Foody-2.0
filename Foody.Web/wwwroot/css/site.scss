@@ -79,11 +79,55 @@ body {
     margin-top: auto;
     padding: 1rem;
     color: var(--template-primary-color, blue);
+
+    @include responsive( laptop ) {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+
+    @include responsive( mobile ) {
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+
+    @include responsive( phone ) {
+        font-size: 1.2em;
+    }
+
+    @include responsive( small-phone ) {
+        font-size: 1.3em;
+    }
+}
+
+.site-footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+
+    @include responsive( phone ) {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .footer-copy {
     flex: 0 0 50%;
     font-style: italic;
+
+    @include responsive( phone ) {
+        flex: 0 0 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+}
+
+.footer-sitemap,
+.footer-contacts {
+    @include responsive( phone ) {
+        flex: 0 0 100%;
+        text-align: center;
+        padding-bottom: 1em;       
+    }
 }
 
 .footer-copy p:nth-child(1) {
@@ -101,12 +145,6 @@ body {
 
 .site-footer a:hover {
     color: var(--template-primary-color-invert, yellow);
-}
-
-.site-footer .wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
 }
 
 #qrCode {

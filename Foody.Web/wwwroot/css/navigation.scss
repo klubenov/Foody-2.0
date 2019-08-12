@@ -14,6 +14,10 @@
     & ul {
         display: flex;
 
+        @include responsive( laptop ) {
+            margin-right: 1em;
+        }
+
         @include responsive( phone ) {
             flex-basis: 90%;
             margin-left: auto;
