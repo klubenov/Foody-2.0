@@ -26,7 +26,6 @@
         }
 
         @include responsive( small-phone ) {
-            display: none;
             position: absolute;
             top: 100%;
             width: 100vw;
@@ -119,6 +118,10 @@
                     margin: 1.5em;
                 }
             }
+        }
+
+        &.hide {
+            display: none;
         }
     }
 

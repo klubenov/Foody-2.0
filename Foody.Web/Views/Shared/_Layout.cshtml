@@ -81,7 +81,11 @@
             navBrandElement.removeAttribute('href');
             navBrandElement.addEventListener('click', function NavBrandEventListener(event) {
                 let rightNav = document.querySelector('ul.nav-right');
-                rightNav.setAttribute('style', 'display:flex');
+                if (rightNav.classList.contains('hide')) {
+                    rightNav.classList.remove('hide');
+                } else {
+                    rightNav.classList.add('hide');
+                }
             });
         }
 
@@ -98,13 +102,20 @@
 
         if (window.innerWidth <= 480) {
             AddNavBrandSmallPhoneEvent();
+            document.querySelector('ul.nav-right').classList.add('hide');
         }
 
         window.onresize = function () {
             if (window.innerWidth <= 480) {
-                AddNavBrandSmallPhoneEvent();
+                if (!document.getElementsByClassName('nav-brand')[0].classList.contains('toggler')) {
+                    AddNavBrandSmallPhoneEvent();
+                    document.querySelector('ul.nav-right').classList.add('hide');
+                }
             } else {
-                ResetNavBrand();
+                if (document.getElementsByClassName('nav-brand')[0].classList.contains('toggler')) {
+                    ResetNavBrand();
+                    document.querySelector('ul.nav-right').classList.remove('hide');
+                }
             }
         }
     </script>

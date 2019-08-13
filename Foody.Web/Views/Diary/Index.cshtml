@@ -3,5 +3,317 @@
     ViewData["Title"] = "Diary";
 }
 
-<h2>Diary</h2>
+<main>
+    <div class="diary-container">
+        <h2 class="diary-heading">Diary</h2>
+
+        <section class="diary-contents">
+            <h3>Meal Log</h3>
+            <ul>
+                <li class="meal-item">
+                    <div class="toggle-area">
+                        <h5>Add new meal</h5>
+                    </div>
+
+                    <form class="on-click-area" action="#">
+                        <div class="date-and-time">
+                            <label for="newMealDate">Date:</label>
+                            <input type="text" name="newMealDate" id="newMealDate" placeholder="13/08/2019" />
+                            <label for="newMealTime">Time:</label>
+                            <input type="text" name="newMealTime" id="newMealTime" placeholder="19:00" />
+                            <label for="newMealTime">Comment:</label>
+                            <input type="text" name="newMealComment" id="newMealComment" value="dinner" />
+                        </div>
+
+                        <div class="meal-item-contents">
+                            <div class="meal-food-items">
+                                <h5>Food Items</h5>
+                                <ul>
+                                    <li class="food-item">
+                                        <button class="remove-button"><i class="fas fa-times"></i></button>
+                                        <select name="1|ItemNewMeal" id="1|ItemNewMeal">
+                                            <option value="potato">Potatoes</option>
+                                            <option value="tomato">Tomatoes</option>
+                                            <option value="eggs">Eggs</option>
+                                            <option value="flour">Flour</option>
+                                            <option value="oliveOil">Olive Oil</option>
+                                            <option value="tableSalt">Table Salt</option>
+                                            <option value="garlic">Garlic</option>
+                                        </select>
+                                        <input type="number" name="1|AmountNewMeal" id="1|AmountNewMeal" placeholder="Please enter amount.." />
+                                    </li>
+                                    <li class="food-item">
+                                        <button class="remove-button"><i class="fas fa-times"></i></button>
+                                        <select name="2|ItemNewMeal" id="2|ItemNewMeal">
+                                            <option value="potato">Potatoes</option>
+                                            <option value="tomato">Tomatoes</option>
+                                            <option value="eggs">Eggs</option>
+                                            <option value="flour">Flour</option>
+                                            <option value="oliveOil">Olive Oil</option>
+                                            <option value="tableSalt">Table Salt</option>
+                                            <option value="garlic">Garlic</option>
+                                        </select>
+                                        <input type="number" name="2|AmountNewMeal" id="2|AmountNewMeal" placeholder="Please enter amount.." />
+                                    </li>
+                                </ul>
+
+                                <button class="add-button">Add Food Item</button>
+                            </div>
+
+                            <div class="meal-recipes">
+                                <h5>Recipes</h5>
+                                <ul>
+                                    <li class="recipe">
+                                        <button class="remove-button"><i class="fas fa-times"></i></button>
+                                        <select name="1|RecipeNewMeal" id="1|RecipeNewMeal">
+                                            <option value="musaka">Musaka</option>
+                                            <option value="guvech">Guvech</option>
+                                            <option value="tarator">Tarator</option>
+                                            <option value="scrambEggs">Scrambled Eggs</option>
+                                            <option value="friedMeatballs">Fried Meatballs</option>
+                                            <option value="shopSalad">Shopska Salata</option>
+                                            <option value="shepSalad">Shepherd Salad</option>
+                                        </select>
+                                        <input type="number" name="1|RecipeAmountNewMeal" id="1|RecipeAmountNewMeal" placeholder="Please enter amount.." />
+                                    </li>
+                                    <li class="recipe">
+                                        <button class="remove-button"><i class="fas fa-times"></i></button>
+                                        <select name="2|RecipeNewMeal" id="2|RecipeNewMeal">
+                                            <option value="musaka">Musaka</option>
+                                            <option value="guvech">Guvech</option>
+                                            <option value="tarator">Tarator</option>
+                                            <option value="scrambEggs">Scrambled Eggs</option>
+                                            <option value="friedMeatballs">Fried Meatballs</option>
+                                            <option value="shopSalad">Shopska Salata</option>
+                                            <option value="shepSalad">Shepherd Salad</option>
+                                        </select>
+                                        <input type="number" name="2|RecipeAmountNewMeal" id="2|RecipeAmountNewMeal" placeholder="Please enter amount.." />
+                                    </li>
+                                </ul>
+
+                                <button class="add-button">Add Recipe</button>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="submit-button" value="Create Macro Element" />
+                    </form>
+                </li>
+                <li class="meal-item">
+                    <div class="toggle-area">
+                        <p>Time of consumption: <time>13/08/2019 19:00</time></p>
+                        <p>Calories: 700kcal</p>
+                        <p>Comment: dinner</p>
+                    </div>
+
+                    <form class="on-click-area" action="#">
+                        <div class="date-and-time">
+                            <label for="1MealDate">Date:</label>
+                            <input type="text" name="1MealDate" id="1MealDate" value="13/08/2019" />
+                            <label for="1MealTime">Time:</label>
+                            <input type="text" name="1MealTime" id="1MealTime" value="19:00" />
+                            <label for="newMealTime">Comment:</label>
+                            <input type="text" name="1MealComment" id="1MealComment" value="dinner" />
+                        </div>
+
+                        <div class="meal-item-contents">
+                            <div class="meal-food-items">
+                                <h5>Food Items</h5>
+                                <ul>
+                                    <li class="food-item">
+                                        <i class="fas fa-times remove-button"></i>
+                                        <select name="1|ItemNewMeal" id="1|ItemNewMeal">
+                                            <option value="potato">Potatoes</option>
+                                            <option value="tomato">Tomatoes</option>
+                                            <option value="eggs">Eggs</option>
+                                            <option value="flour">Flour</option>
+                                            <option value="oliveOil" selected>Olive Oil</option>
+                                            <option value="tableSalt">Table Salt</option>
+                                            <option value="garlic">Garlic</option>
+                                        </select>
+                                        <input type="number" name="1|AmountNewMeal" id="1|AmountNewMeal" value="20" />
+                                    </li>
+                                    <li class="food-item">
+                                        <i class="fas fa-times remove-button"></i>
+                                        <select name="2|ItemNewMeal" id="2|ItemNewMeal">
+                                            <option value="potato">Potatoes</option>
+                                            <option value="tomato">Tomatoes</option>
+                                            <option value="eggs">Eggs</option>
+                                            <option value="flour">Flour</option>
+                                            <option value="oliveOil">Olive Oil</option>
+                                            <option value="tableSalt" selected>Table Salt</option>
+                                            <option value="garlic">Garlic</option>
+                                        </select>
+                                        <input type="number" name="2|AmountNewMeal" id="2|AmountNewMeal" value="3" />
+                                    </li>
+                                </ul>
+
+                                <button class="add-button">Add Food Item</button>
+                            </div>
+
+                            <div class="meal-recipes">
+                                <h5>Recipes</h5>
+                                <ul>
+                                    <li class="recipe">
+                                        <i class="fas fa-times remove-button"></i>
+                                        <select name="1|RecipeNewMeal" id="1|RecipeNewMeal">
+                                            <option value="musaka" selected>Musaka</option>
+                                            <option value="guvech">Guvech</option>
+                                            <option value="tarator">Tarator</option>
+                                            <option value="scrambEggs">Scrambled Eggs</option>
+                                            <option value="friedMeatballs">Fried Meatballs</option>
+                                            <option value="shopSalad">Shopska Salata</option>
+                                            <option value="shepSalad">Shepherd Salad</option>
+                                        </select>
+                                        <input type="number" name="1|RecipeAmountNewMeal" id="1|RecipeAmountNewMeal" value="300" />
+                                    </li>
+                                    <li class="recipe">
+                                        <i class="fas fa-times remove-button"></i>
+                                        <select name="2|RecipeNewMeal" id="2|RecipeNewMeal">
+                                            <option value="musaka">Musaka</option>
+                                            <option value="guvech">Guvech</option>
+                                            <option value="tarator">Tarator</option>
+                                            <option value="scrambEggs">Scrambled Eggs</option>
+                                            <option value="friedMeatballs">Fried Meatballs</option>
+                                            <option value="shopSalad" selected>Shopska Salata</option>
+                                            <option value="shepSalad">Shepherd Salad</option>
+                                        </select>
+                                        <input type="number" name="2|RecipeAmountNewMeal" id="2|RecipeAmountNewMeal" value="300" />
+                                    </li>
+                                </ul>
+
+                                <button class="add-button">Add Recipe</button>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="submit-button" value="Create Macro Element" />
+                    </form>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="statistics-container">
+            <h3>Statistics</h3>
+
+            <div class="statistics monthly-statistics">
+                <h4>Past month</h4>
+                <p>Average daily calories:</p>
+                <p>- 1986 kcal</p>
+                <p>Average macros distribution (carb/fat/protein):</p>
+                <p>- 50/30/20%</p>
+            </div>
+
+            <div class="statistics custom-statistics">
+                <h4>Custom period</h4>
+                
+                <form action="#" method="post">
+                    <label for="fromTime">From:</label>
+                    <input type="text" name="fromTime" id="fromTime" paceholder="07/08/2019 12:00" />
+                    <label for="toTime">To:</label>
+                    <input type="text" name="toTime" id="toTime" paceholder="13/08/2019 19:00" />
+                    <input type="submit" name="getStatistics" value="Get statistics" />
+                </form>
+
+                <p>Average daily calories:</p>
+                <p>- 1986 kcal</p>
+                <p>Average macros distribution (carb/fat/protein):</p>
+                <p>- 50/30/20%</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        let items = document.querySelectorAll('.toggle-area');
+        items.forEach(function (item) {
+            item.addEventListener('click', function () {
+                let onClickArea = item.parentNode.getElementsByClassName('on-click-area')[0];
+
+                if (onClickArea.classList.contains('clicked-area')) {
+                    item.parentNode.getElementsByClassName('on-click-area')[0].classList.remove('clicked-area');
+                } else {
+                    items.forEach(function (item) {
+                        item.parentNode.getElementsByClassName('on-click-area')[0].classList.remove('clicked-area');
+                    });
+
+                    onClickArea.classList.add('clicked-area');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function ChangeId(input, iterator) {
+            let decomposedInput = input.split('|');
+            decomposedInput[0] = iterator + '|';
+            console.log(decomposedInput);
+            result = decomposedInput.join('');
+            return result;
+        }
+
+        function UpdateFoodItem(foodItem, id) {
+            let foodItemNameElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'SELECT')[0];
+            let foodItemAmountElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'INPUT')[0];
+
+            foodItemNameElement.setAttribute('name', ChangeId(foodItemNameElement.getAttribute('name'), id));
+            foodItemNameElement.setAttribute('id', ChangeId(foodItemNameElement.getAttribute('id'), id));
+
+            foodItemAmountElement.setAttribute('name', ChangeId(foodItemAmountElement.getAttribute('name'), id));
+            foodItemAmountElement.setAttribute('id', ChangeId(foodItemAmountElement.getAttribute('id'), id));
+        }
+
+        function ReEnumerateRecipe(recipeUl) {
+            let foodItems = Array.from(recipeUl.childNodes).filter(c => c.tagName === 'LI');
+
+            for (let i = 0; i < foodItems.length; i++) {
+                let foodItem = foodItems[i];
+
+                UpdateFoodItem(foodItem, i + 1);
+            }
+        }
+
+        let removeButtons = document.querySelectorAll('.remove-button');
+
+        removeButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                let parent = event.target.parentNode;
+                let upperParent = parent.parentNode;
+                console.log(parent);
+                console.log(upperParent);
+                upperParent.removeChild(parent);
+                ReEnumerateRecipe(upperParent);
+            });
+        });
+
+        let addButtons = document.querySelectorAll('.add-button');
+
+        addButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                let parent = event.target.parentNode;
+                let foodItemsUl = Array.from(parent.childNodes).filter(c => c.tagName === 'UL')[0];
+                let foodItems = Array.from(foodItemsUl.childNodes).filter(c => c.tagName === 'LI');
+                let lastFoodItem = foodItems[foodItems.length - 1];
+
+                let newFoodItem = lastFoodItem.cloneNode(true);
+                UpdateFoodItem(newFoodItem, foodItems.length + 1);
+                console.log(newFoodItem);
+
+                newFoodItem.querySelector('.remove-button').addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let parent = event.target.parentNode;
+                    let upperParent = parent.parentNode;
+                    console.log(parent);
+                    console.log(upperParent);
+                    upperParent.removeChild(parent);
+                    ReEnumerateRecipe(upperParent);
+                });
+
+                foodItemsUl.appendChild(newFoodItem);
+            });
+        });
+    </script>
+}
 

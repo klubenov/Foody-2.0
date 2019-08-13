@@ -6,6 +6,7 @@
 @import "navigation";
 @import "menu";
 @import "articles";
+@import "diary";
 
 * {
     padding: 0;
@@ -95,7 +96,7 @@ body {
     }
 
     @include responsive( small-phone ) {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 }
 

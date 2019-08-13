@@ -52,8 +52,8 @@
         }
 
         @include responsive( small-phone ) {
-            padding: 3em 1em;
-            font-size: 1.2em;
+            padding: 2em 1em;
+            font-size: 1em;
         }
     }
 
@@ -133,7 +133,7 @@
         }
 
         & .section-tab:nth-child(2) {
-            background-color: var(--template-secondary-color-, green);
+            background-color: var(--template-secondary-color, green);
         }
 
         & .section-tab:nth-child(3) {

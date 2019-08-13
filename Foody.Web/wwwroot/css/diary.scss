@@ -1,0 +1,249 @@
+﻿.diary-container {
+    display: grid;
+    grid-template-columns: 75% auto;
+    grid-template-rows: 5rem auto;
+    grid-template-areas: "heading heading" "contents statistics";
+    padding-top: 2em;
+    grid-gap: 2em;
+
+    @include responsive( mobile ) {
+        grid-template-rows: 5rem auto auto;
+        grid-template-areas: "heading heading" "statistics statistics" "contents contents";
+        padding: 2em 1em;
+    }
+
+    & .diary-heading {
+        grid-area: heading;
+        text-align: center;
+        border-bottom: 2px solid var(--template-primary-color, blue);
+    }
+
+    & .diary-contents {
+        grid-area: contents;
+        border: 3px solid var(--template-primary-color-invert, yellow);
+        border-radius: 0.6em;
+
+        & > h3 {
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        & > ul {
+            padding: 0.8em;
+            padding-top: 1em;
+
+            & h4 {
+                padding: 1em 0 2em 0;
+                text-align: center;
+            }
+
+            & h5 {
+                text-align: center;
+            }
+
+            & .meal-item {
+                list-style: none outside;
+                border: 2px solid var(--template-secondary-color, green);
+                border-radius: 0.3em;
+                margin-bottom: 0.3em;
+            }
+        }
+
+        & .toggle-area {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 0.6em;
+            align-items: center;
+
+
+            & p {
+                flex-basis: 33%;
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: lightblue;
+            }
+        }
+
+        & .on-click-area {
+            display: none;
+            padding: 1em;
+            border-top: 2px solid var(--template-primary-color, blue);
+
+            &.clicked-area {
+                display: block;
+                animation: menu-option-on-click-area-rise 0.3s ease-out;
+            }
+
+            & .date-and-time {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding-bottom: 0.5em;
+
+                & label, & input {
+                    flex: 0 0 51%;
+                }
+
+                & input {
+                    margin-bottom: 1em;
+                    padding: 0.2em 0.5em;
+                }
+            }
+
+            & .meal-item-contents {
+                border: 2px solid #b4b4b4;
+                border-left: none;
+                border-right: none;
+                padding: 2em 0;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+
+                & input {
+                    padding: 0.3em;
+                    border: 1px solid #b4b4b4;
+                    border-radius: 0.2em;
+                }
+
+
+                & .meal-food-items, & .meal-recipes {
+                    flex: 0 0 50%;
+                    padding: 2em 1em;
+
+                    @include responsive( desktop ) {
+                        flex: 0 0 80%;
+                    }
+
+                    @include responsive( phone ) {
+                        flex: 0 0 100%;
+                    }
+
+                    & h5 {
+                        padding-bottom: 1em;
+                    }
+                }
+
+
+                & .food-item, & .recipe {
+                    list-style: none outside;
+                    display: flex;
+                    justify-content: space-around;
+                    margin-bottom: 1.5em;
+
+                    & i {
+                        flex: 0 0 5%;
+                    }
+
+                    & select {
+                        flex: 0 0 40%;
+                    }
+
+                    & input {
+                        width: 100%;
+                        flex: 0 0 20%;
+                    }
+                }
+
+                & .add-button {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0.5em 1em;
+                    border-radius: 0.2em;
+                    border: 1px solid var(--template-secodary-color, green);
+                    background-color: var(--template-secodary-color, green);
+                    color: white;
+                }
+
+                & .remove-button {
+                    font-size: 1.5em;
+                    color: var(--template-secodary-color-invert, red);
+                }
+            }
+
+            & .submit-button {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 1.4em;
+                padding: 0.5em 1em;
+                font-size: 1em;
+                background-color: var(--template-primary-color, blue);
+                color: white;
+                border: 1px solid var(--template-primary-color, blue);
+                border-radius: 0.2em;
+            }
+        }
+    }
+
+    & .statistics-container {
+        grid-area: statistics;
+
+        @include responsive( mobile ) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        & h3 {
+            border-bottom: 2px solid var(--template-primary-color, blue);
+            text-align: center;
+
+            @include responsive( mobile ) {
+                flex-basis: 60%;
+            }
+        }
+
+        & .statistics {
+            margin-top: 2em;
+            border-radius: 0.6em;
+            text-shadow: 1px 1px black;
+            text-align: center;
+            color: white;
+            padding: 2em;
+
+            & label {
+                text-align: start;
+            }
+
+            &.monthly-statistics {
+                border: 3px solid var(--template-secondary-color, green);
+                background-color: var(--template-secondary-color, green);
+            }
+
+            &.custom-statistics {
+                border: 3px solid var(--template-secondary-color-invert, red);
+                background-color: var(--template-secondary-color-invert, red);
+            }
+
+            @include responsive( mobile ) {
+                flex-basis: 45%;
+            }
+
+            @include responsive( small-phone ) {
+                flex-basis: 100%;
+            }
+        }
+
+        & form {
+            display: flex;
+            flex-wrap: wrap;
+
+            & input, & label {
+                flex-basis: 100%;
+            }
+        }
+
+        & input {
+            margin-bottom: 1em;
+            padding: 0.2em 0.5em;
+            padding: 0.3em;
+            border: 1px solid #b4b4b4;
+            border-radius: 0.2em;
+        }
+    }
+}
