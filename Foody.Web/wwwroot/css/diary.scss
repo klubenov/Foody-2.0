@@ -70,6 +70,7 @@
 
             &:hover {
                 background-color: lightblue;
+                transition: 0.2s;
             }
         }
 
@@ -160,28 +161,28 @@
                     margin-right: auto;
                     padding: 0.5em 1em;
                     border-radius: 0.2em;
-                    border: 1px solid var(--template-secodary-color, green);
+                    border: 2px solid var(--template-secodary-color, green);
                     background-color: var(--template-secodary-color, green);
                     color: white;
+
+                    &:hover {
+                        background-color: white;
+                        color: var(--template-secodary-color, green);
+                        transition: 0.2s;
+                    }
                 }
 
                 & .remove-button {
                     font-size: 1.5em;
-                    color: var(--template-secodary-color-invert, red);
-                }
-            }
+                    color: var(--template-secodary-color-invert,#f00);
+                    padding-left: 4.5px;
+                    border-left: 2px solid transparent;
 
-            & .submit-button {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 1.4em;
-                padding: 0.5em 1em;
-                font-size: 1em;
-                background-color: var(--template-primary-color, blue);
-                color: white;
-                border: 1px solid var(--template-primary-color, blue);
-                border-radius: 0.2em;
+                    &:hover {
+                        border-color: var(--template-secodary-color-invert, red);
+                        transition: 0.2s;
+                    }
+                }
             }
         }
     }
@@ -242,9 +243,18 @@
         & form {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
 
             & input, & label {
                 flex-basis: 100%;
+            }
+
+            & .submit-button {
+                flex-basis: 80%;
+                border: 2px solid var(--template-primary-color, blue);
+                border-radius: 0.2em;
+                padding: 0.5em 1em;
+                margin-top: 0.4em;
             }
         }
 
@@ -255,5 +265,24 @@
             border: 1px solid #b4b4b4;
             border-radius: 0.2em;
         }
+    }
+}
+
+.submit-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.4em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: var(--template-primary-color, blue);
+    color: white;
+    border: 2px solid var(--template-primary-color, blue);
+    border-radius: 0.2em;
+
+    &:hover {
+        background-color: white;
+        color: var(--template-primary-color, blue);
+        transition: 0.2s;
     }
 }

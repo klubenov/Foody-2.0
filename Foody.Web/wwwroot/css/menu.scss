@@ -264,6 +264,7 @@
 
         &:hover {
             background-color: lightblue;
+            transition: 0.2s;
         }
     }
 
@@ -380,14 +381,27 @@
             & .add-button {
                 padding: 0.5em 1em;
                 border-radius: 0.2em;
-                border: 1px solid var(--template-secodary-color, green);
+                border: 2px solid var(--template-secodary-color, green);
                 background-color: var(--template-secodary-color, green);
                 color: white;
+
+                &:hover {
+                    background-color: white;
+                    color: var(--template-secodary-color, green);
+                    transition: 0.2s;
+                }
             }
 
             & .remove-button {
                 font-size: 1.5em;
-                color: var(--template-secodary-color-invert, red);
+                color: var(--template-secodary-color-invert,#f00);
+                padding-left: 4.5px;
+                border-left: 2px solid transparent;
+
+                &:hover {
+                    border-color: var(--template-secodary-color-invert, red);
+                    transition: 0.2s;
+                }
             }
         }
 
@@ -443,8 +457,14 @@
             font-size: 1em;
             background-color: var(--template-primary-color, blue);
             color: white;
-            border: 1px solid var(--template-primary-color, blue);
+            border: 2px solid var(--template-primary-color, blue);
             border-radius: 0.2em;
+
+            &:hover {
+                background-color: white;
+                color: var(--template-primary-color, blue);
+                transition: 0.2s;
+            }
         }
     }
 }
