@@ -58,8 +58,14 @@
 
 
             & p {
-                flex-basis: 33%;
+                flex-basis: 25%;
                 text-align: center;
+                font-weight: 600;
+                color: var(--template-primary-color, blue);
+
+                &:first-child {
+                    flex-basis: 50%;
+                }
             }
 
             &:hover {
@@ -205,6 +211,10 @@
             text-align: center;
             color: white;
             padding: 2em;
+
+            & h4 {
+                color: white;
+            }
 
             & label {
                 text-align: start;

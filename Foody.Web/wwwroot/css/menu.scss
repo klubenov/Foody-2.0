@@ -176,6 +176,12 @@
     flex: 1 0 75%;
     padding: 20em 2em;
     animation: menu-option-slide 0.3s ease-out;
+
+    @include responsive( mobile ) {
+        animation: menu-option-rise 0.3s ease-out;
+        padding: 2em;
+        text-align: center;
+    }
 }
 
 
@@ -252,6 +258,8 @@
         & p {
             flex-basis: 33%;
             text-align: center;
+            font-weight: 600;
+            color: var(--template-primary-color, blue);
         }
 
         &:hover {

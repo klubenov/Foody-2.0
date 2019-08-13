@@ -102,7 +102,7 @@ body {
 
 .site-footer .wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-bottom: 1rem;
 
     @include responsive( phone ) {
@@ -112,8 +112,9 @@ body {
 }
 
 .footer-copy {
-    flex: 0 0 50%;
+    flex: 0 0 30%;
     font-style: italic;
+    padding-top: 3.2em;
 
     @include responsive( phone ) {
         flex: 0 0 100%;
@@ -124,10 +125,41 @@ body {
 
 .footer-sitemap,
 .footer-contacts {
+    padding: 0em 1em 1em 1em;
+
+    @include responsive( phone ) {
+        text-align: center;
+        padding: 1em 0;
+    }
+}
+
+.footer-sitemap {
+    flex: 0 0 40%;
+
     @include responsive( phone ) {
         flex: 0 0 100%;
-        text-align: center;
-        padding-bottom: 1em;       
+    }
+}
+
+
+.footer-contacts {
+    flex: 0 0 25%;
+
+    @include responsive( phone ) {
+        flex: 0 0 100%;
+    }
+}
+
+.footer-sitemap ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li {
+        flex-basis: 45%;
+
+        @include responsive( phone ) {
+            flex-basis: 100%;
+        }
     }
 }
 
@@ -137,6 +169,7 @@ body {
 
 .site-footer li {
     list-style: none outside;
+    padding-top: 0.5em;
 }
 
 .site-footer a {

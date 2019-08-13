@@ -46,6 +46,10 @@
             }
         }
 
+        & h2 {
+            color: white;
+        }
+
         @include responsive( phone ) {
             padding: 6em 2em;
             font-size: 1.1em;
@@ -104,6 +108,7 @@
             & h3 {
                 position: relative;
                 padding-top: 1em;
+                color: white;
 
                 &:after {
                     position: absolute;
