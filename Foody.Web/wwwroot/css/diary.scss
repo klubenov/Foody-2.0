@@ -6,16 +6,24 @@
     padding-top: 2em;
     grid-gap: 2em;
 
+    @include responsive( laptop ) {
+        padding: 2em 1em;
+        grid-gap: 1em;
+    }
+
     @include responsive( mobile ) {
         grid-template-rows: 5rem auto auto;
         grid-template-areas: "heading heading" "statistics statistics" "contents contents";
-        padding: 2em 1em;
     }
 
     & .diary-heading {
         grid-area: heading;
         text-align: center;
         border-bottom: 2px solid var(--template-primary-color, blue);
+
+        @include responsive( laptop ) {
+            margin-right: 1rem;
+        }
     }
 
     & .diary-contents {
@@ -55,6 +63,7 @@
             background-color: #f8f8f8;
             padding: 0.6em;
             align-items: center;
+            cursor: pointer;
 
 
             & p {
