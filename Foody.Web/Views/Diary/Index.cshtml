@@ -22,7 +22,7 @@
                             <label for="newMealTime">Time:</label>
                             <input type="text" name="newMealTime" id="newMealTime" placeholder="19:00" />
                             <label for="newMealTime">Comment:</label>
-                            <input type="text" name="newMealComment" id="newMealComment" value="dinner" />
+                            <input type="text" name="newMealComment" id="newMealComment" placeholder="Add a note about your meal here.." />
                         </div>
 
                         <div class="meal-item-contents">
@@ -32,6 +32,7 @@
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|ItemNewMeal" id="1|ItemNewMeal">
+                                            <option disabled selected> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -40,20 +41,7 @@
                                             <option value="tableSalt">Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="1|AmountNewMeal" id="1|AmountNewMeal" placeholder="Please enter amount.." />
-                                    </li>
-                                    <li class="food-item">
-                                        <i class="fas fa-times remove-button"></i>
-                                        <select name="2|ItemNewMeal" id="2|ItemNewMeal">
-                                            <option value="potato">Potatoes</option>
-                                            <option value="tomato">Tomatoes</option>
-                                            <option value="eggs">Eggs</option>
-                                            <option value="flour">Flour</option>
-                                            <option value="oliveOil">Olive Oil</option>
-                                            <option value="tableSalt">Table Salt</option>
-                                            <option value="garlic">Garlic</option>
-                                        </select>
-                                        <input type="number" name="2|AmountNewMeal" id="2|AmountNewMeal" placeholder="Please enter amount.." />
+                                        <input type="number" name="1|AmountNewMeal" id="1|AmountNewMeal" placeholder="Amount (gr.)" />
                                     </li>
                                 </ul>
 
@@ -66,6 +54,7 @@
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|RecipeNewMeal" id="1|RecipeNewMeal">
+                                            <option disabled selected> -- recipes -- </option>
                                             <option value="musaka">Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -74,20 +63,7 @@
                                             <option value="shopSalad">Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="1|RecipeAmountNewMeal" id="1|RecipeAmountNewMeal" placeholder="Please enter amount.." />
-                                    </li>
-                                    <li class="recipe">
-                                        <i class="fas fa-times remove-button"></i>
-                                        <select name="2|RecipeNewMeal" id="2|RecipeNewMeal">
-                                            <option value="musaka">Musaka</option>
-                                            <option value="guvech">Guvech</option>
-                                            <option value="tarator">Tarator</option>
-                                            <option value="scrambEggs">Scrambled Eggs</option>
-                                            <option value="friedMeatballs">Fried Meatballs</option>
-                                            <option value="shopSalad">Shopska Salata</option>
-                                            <option value="shepSalad">Shepherd Salad</option>
-                                        </select>
-                                        <input type="number" name="2|RecipeAmountNewMeal" id="2|RecipeAmountNewMeal" placeholder="Please enter amount.." />
+                                        <input type="number" name="1|RecipeAmountNewMeal" id="1|RecipeAmountNewMeal" placeholder="Amount (gr.)" />
                                     </li>
                                 </ul>
 
@@ -123,6 +99,7 @@
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|ItemMeal1" id="1|ItemMeal1">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -131,11 +108,12 @@
                                             <option value="tableSalt">Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="1|AmountMeal1" id="1|AmountMeal1" value="20" />
+                                        <input type="number" name="1|AmountMeal1" id="1|AmountMeal1" value="20" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|ItemMeal1" id="2|ItemMeal1">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -144,7 +122,7 @@
                                             <option value="tableSalt" selected>Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="2|AmountMeal1" id="2|AmountMeal1" value="3" />
+                                        <input type="number" name="2|AmountMeal1" id="2|AmountMeal1" value="3" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -157,6 +135,7 @@
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|RecipeMeal1" id="1|RecipeMeal1">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka" selected>Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -165,11 +144,12 @@
                                             <option value="shopSalad">Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="1|RecipeAmountMeal1" id="1|RecipeAmountMeal1" value="300" />
+                                        <input type="number" name="1|RecipeAmountMeal1" id="1|RecipeAmountMeal1" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|RecipeMeal1" id="2|RecipeMeal1">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka">Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -178,7 +158,7 @@
                                             <option value="shopSalad" selected>Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="2|RecipeAmountMeal1" id="2|RecipeAmountMeal1" value="300" />
+                                        <input type="number" name="2|RecipeAmountMeal1" id="2|RecipeAmountMeal1" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -214,6 +194,7 @@
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|ItemMeal2" id="1|ItemMeal2">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -222,11 +203,12 @@
                                             <option value="tableSalt">Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="1|AmountMeal2" id="1|AmountMeal2" value="20" />
+                                        <input type="number" name="1|AmountMeal2" id="1|AmountMeal2" value="20" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|ItemMeal2" id="2|ItemMeal2">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -235,7 +217,7 @@
                                             <option value="tableSalt" selected>Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="2|AmountMeal2" id="2|AmountMeal2" value="3" />
+                                        <input type="number" name="2|AmountMeal2" id="2|AmountMeal2" value="3" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -248,6 +230,7 @@
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|RecipeMeal2" id="1|RecipeMeal2">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka" selected>Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -256,11 +239,12 @@
                                             <option value="shopSalad">Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="1|RecipeAmountMeal2" id="1|RecipeAmountMeal2" value="300" />
+                                        <input type="number" name="1|RecipeAmountMeal2" id="1|RecipeAmountMeal2" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|RecipeMeal2" id="2|RecipeMeal2">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka">Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -269,7 +253,7 @@
                                             <option value="shopSalad" selected>Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="2|RecipeAmountMeal2" id="2|RecipeAmountMeal2" value="300" />
+                                        <input type="number" name="2|RecipeAmountMeal2" id="2|RecipeAmountMeal2" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -305,6 +289,7 @@
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|ItemMeal3" id="1|ItemMeal3">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -313,11 +298,12 @@
                                             <option value="tableSalt">Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="1|AmountMeal3" id="1|AmountMeal3" value="20" />
+                                        <input type="number" name="1|AmountMeal3" id="1|AmountMeal3" value="20" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="food-item">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|ItemMeal3" id="2|ItemMeal3">
+                                            <option disabled> -- food items -- </option>
                                             <option value="potato">Potatoes</option>
                                             <option value="tomato">Tomatoes</option>
                                             <option value="eggs">Eggs</option>
@@ -326,7 +312,7 @@
                                             <option value="tableSalt" selected>Table Salt</option>
                                             <option value="garlic">Garlic</option>
                                         </select>
-                                        <input type="number" name="2|AmountMeal3" id="2|AmountMeal3" value="3" />
+                                        <input type="number" name="2|AmountMeal3" id="2|AmountMeal3" value="3" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -339,6 +325,7 @@
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="1|RecipeMeal3" id="1|RecipeMeal3">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka" selected>Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -347,11 +334,12 @@
                                             <option value="shopSalad">Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="1|RecipeAmountMeal3" id="1|RecipeAmountMeal3" value="300" />
+                                        <input type="number" name="1|RecipeAmountMeal3" id="1|RecipeAmountMeal3" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                     <li class="recipe">
                                         <i class="fas fa-times remove-button"></i>
                                         <select name="2|RecipeMeal3" id="2|RecipeMeal3">
+                                            <option disabled> -- recipes -- </option>
                                             <option value="musaka">Musaka</option>
                                             <option value="guvech">Guvech</option>
                                             <option value="tarator">Tarator</option>
@@ -360,7 +348,7 @@
                                             <option value="shopSalad" selected>Shopska Salata</option>
                                             <option value="shepSalad">Shepherd Salad</option>
                                         </select>
-                                        <input type="number" name="2|RecipeAmountMeal3" id="2|RecipeAmountMeal3" value="300" />
+                                        <input type="number" name="2|RecipeAmountMeal3" id="2|RecipeAmountMeal3" value="300" placeholder="Amount (gr.)"/>
                                     </li>
                                 </ul>
 
@@ -434,15 +422,26 @@
             return result;
         }
 
-        function UpdateFoodItem(foodItem, id) {
+        function UpdateFoodItem(foodItem, id, reset) {
             let foodItemNameElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'SELECT')[0];
             let foodItemAmountElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'INPUT')[0];
 
             foodItemNameElement.setAttribute('name', ChangeId(foodItemNameElement.getAttribute('name'), id));
-            foodItemNameElement.setAttribute('id', ChangeId(foodItemNameElement.getAttribute('id'), id));
+            foodItemNameElement.setAttribute('id', ChangeId(foodItemNameElement.getAttribute('id'), id));            
 
             foodItemAmountElement.setAttribute('name', ChangeId(foodItemAmountElement.getAttribute('name'), id));
             foodItemAmountElement.setAttribute('id', ChangeId(foodItemAmountElement.getAttribute('id'), id));
+
+            if (reset) {
+                foodItemNameElement.querySelectorAll('option').forEach(option => {
+                if (option.getAttribute('selected')) {
+                    option.removeAttribute("selected")
+                }
+                });
+                foodItemNameElement.querySelectorAll('option')[0].setAttribute('selected', 'selected');
+
+                foodItemAmountElement.value = '';
+            }
         }
 
         function ReEnumerateRecipe(recipeUl) {
@@ -451,7 +450,7 @@
             for (let i = 0; i < foodItems.length; i++) {
                 let foodItem = foodItems[i];
 
-                UpdateFoodItem(foodItem, i + 1);
+                UpdateFoodItem(foodItem, i + 1, false);
             }
         }
 
@@ -480,7 +479,7 @@
                 let lastFoodItem = foodItems[foodItems.length - 1];
 
                 let newFoodItem = lastFoodItem.cloneNode(true);
-                UpdateFoodItem(newFoodItem, foodItems.length + 1);
+                UpdateFoodItem(newFoodItem, foodItems.length + 1, true);
                 console.log(newFoodItem);
 
                 newFoodItem.querySelector('.remove-button').addEventListener('click', function (event) {

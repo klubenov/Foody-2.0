@@ -68,7 +68,7 @@
                 return result;
             }
 
-            function UpdateFoodItem(foodItem, id) {
+            function UpdateFoodItem(foodItem, id, reset) {
                 let foodItemNameElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'SELECT')[0];
                 let foodItemAmountElement = Array.from(foodItem.childNodes).filter(c => c.tagName === 'INPUT')[0];
 
@@ -77,6 +77,17 @@
 
                 foodItemAmountElement.setAttribute('name', ChangeId(foodItemAmountElement.getAttribute('name'), id));
                 foodItemAmountElement.setAttribute('id', ChangeId(foodItemAmountElement.getAttribute('id'), id));
+
+                if (reset) {
+                    foodItemNameElement.querySelectorAll('option').forEach(option => {
+                    if (option.getAttribute('selected')) {
+                        option.removeAttribute("selected")
+                    }
+                    });
+                    foodItemNameElement.querySelectorAll('option')[0].setAttribute('selected', 'selected');
+
+                    foodItemAmountElement.value = '';
+                }
             }
 
             function ReEnumerateRecipe(recipeUl) {
@@ -85,7 +96,7 @@
                 for (let i = 0; i < foodItems.length; i++) {
                     let foodItem = foodItems[i];
 
-                    UpdateFoodItem(foodItem, i + 1);
+                    UpdateFoodItem(foodItem, i + 1, false);
                 }
             }
 
@@ -112,7 +123,7 @@
                     let lastFoodItem = foodItems[foodItems.length - 1];
 
                     let newFoodItem = lastFoodItem.cloneNode(true);
-                    UpdateFoodItem(newFoodItem, foodItems.length + 1);
+                    UpdateFoodItem(newFoodItem, foodItems.length + 1, true);
 
                     newFoodItem.querySelector('.remove-button').addEventListener('click', function (event) {
                         event.preventDefault();
